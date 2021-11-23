@@ -9,7 +9,18 @@ jobs:
     steps:
       - name: Clone repo
         uses: actions/checkout@v2
-      
+        
+      - name: Use Node.js 14.15.5
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.15.5
+          
+      - name: Build
+        run: |
+          npm i 
+          run: npm run build
+          run: tar czfv slug.tgz ./dist
+        
       - name: Ls
         run: ls
 
