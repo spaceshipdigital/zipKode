@@ -7,22 +7,18 @@ jobs:
     runs-on: ubuntu-latest
         
     steps:
-      - name: Clone repo
+      - name: Clone repository
         uses: actions/checkout@v2
         
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-          cache: 'npm'
           
       - name: Build
         run: |
           npm ci 
           npm run build
-          
-      - name: Zip
-        run: tar czfv slug.tgz ./dist
         
       - name: Ls
         run: ls
@@ -38,3 +34,4 @@ jobs:
          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
          heroku_app_name: "zipkode"
          heroku_email: "b.boy.bip@gmail.com"
+         appdir: 'dist/'
