@@ -1,0 +1,95 @@
+.testimonials {
+    background-color: get('color.primary.500');
+    padding: 79px 0 72px;
+    margin-top: 150px;
+    @media all and (max-width: get('responsive.md')) {
+        margin-top: 62px;
+    }
+    @media all and (max-width: get('responsive.sm')) {
+        padding-top: 47px;
+    }
+    .section-title {
+        text-transform: initial;
+        text-align: left;
+        max-width: 350px;
+        width: 100%;
+        @media all and (max-width: get('responsive.lg')) {
+            max-width: 100%;
+        }
+    }
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @media all and (max-width: get('responsive.lg')) {
+            flex-direction: column;
+        }
+    }
+    &-cards {
+        width: 100%;
+        max-width: 634px;
+        position: relative;
+        margin-left: auto;
+    }
+    .carousel {
+        box-shadow: 0px 24px 38px rgba(148, 148, 148, 0.14), 0px 9px 46px rgba(119, 119, 119, 0.12), 0px 11px 15px rgba(105, 105, 105, 0.2);
+        border-radius: 20px;
+        background-color: #fff;
+        @media all and (max-width: get('responsive.lg')) {
+            margin-top: 30px;
+        }
+        &-inner {
+            position: relative;
+        }
+        &-control {
+            &-next {
+                right: 10px;
+            }
+            &-prev {
+                left: 10px;
+            }
+            &-prev,
+            &-next {
+                bottom: 0;
+                width: unset;
+            }
+        }
+    }
+    &-card {
+        background-color: #fff;
+        padding: 50px 72px 87px 50px;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 634px;
+        position: relative;
+        margin: 0;
+        blockquote p {
+            font-size: rem(18px);
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        figcaption {
+            text-align: right;
+            position: absolute;
+            right: 45px;
+            bottom: 22px;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.2;
+            font-style: italic;
+            cite {
+                display: block;
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
+    }
+    .carousel-control.left,
+    .carousel-control.right {
+        transition: none !important;
+    }
+}

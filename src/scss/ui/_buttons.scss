@@ -1,0 +1,67 @@
+.btn {
+    font: 900 normal rem(18px) / 1.22 get('font.family-t');
+    align-items: center;
+    border-width: 2px;
+    border-style: solid;
+    padding: 12px 25px;
+    border-radius: 50px;
+    position: relative;
+    &-primary {
+        text-transform: uppercase;
+        color: get('color.neutral.700');
+        border-radius: 50px;
+        border-color: get('color.primary.400');
+        &:hover {
+            cursor: pointer;
+            background: get('color.neutral.500');
+            border-color: get('color.neutral.500');
+            border-radius: 40px;
+            color: get('color.primary.500');
+        }
+    }
+    &-secondary {
+        color: #fff;
+        background-color: #000;
+        text-transform: uppercase;
+        &:hover {
+            cursor: pointer;
+            color: #000;
+            border-color: #000;
+            background: transparent;
+        }
+    }
+    &-info {
+        background: #D1D1D1;
+        &:hover {
+            cursor: pointer;
+            background: #fff;
+        }
+    }
+    &-light {
+        color: #fff;
+        border-color: #fff;
+        text-transform: uppercase;
+        &:hover {
+            cursor: pointer;
+            color: #FFD23F;
+            border-color: #FFD23F;
+        }
+    }
+}
+
+.carousel {
+    &-indicators {
+        margin: 0;
+        height: 20px;
+        bottom: -20px;
+        transform: translateY(100%);
+        button {
+            border-radius: 50%;
+        }
+    }
+    &-dark .carousel-indicators [data-bs-target] {
+        &.active {
+            background-color: #fff;
+        }
+    }
+}

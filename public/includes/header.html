@@ -1,0 +1,44 @@
+<header class="main-header <%= headerClass %>">
+    <a class="main-header-logo" href="#">
+        <img src="images/zipkode.svg" alt="ZipKode logo">
+    </a>
+    <nav class="main-header-nav navbar navbar-dark navbar-expand-xl navbar-light bg-light">
+        <a href="#" class="action-login d-xxl-none d-xl-none">
+            <svg role="img" class="person-icon">
+                <use xlink:href="#person-icon"></use>
+            </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="active" href="#">How it works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Contacts</a>
+                </li>
+            </ul>
+            <a href="#" type="button" class="btn btn-info">
+                <svg role="img" class="calc-icon">
+                    <use xlink:href="#calc-icon"></use>
+                </svg>
+                <span>Shipping Calculator</span>
+            </a>
+
+            <a href="#" type="button" class="btn <%=classname%>">
+                <%=label%>
+            </a>
+
+            <a href="#" type="button" class="btn btn-primary action-signup">Sign Up</a>
+
+        </div>
+    </nav>
+</header>

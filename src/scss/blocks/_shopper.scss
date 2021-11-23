@@ -1,0 +1,138 @@
+.shopper {
+    margin-top: 100px;
+    padding: 110px 0;
+    background: #FFD23F;
+    position: relative;
+    height: 559px;
+    @media all and (max-width: get('responsive.lg')) {
+        padding-top: 200px;
+    }
+    @media all and (max-width: get('responsive.lg')) {
+        margin-top: 205px;
+    }
+    &-cards,
+    &-liberty-statue {
+        position: absolute;
+        bottom: 0;
+    }
+    &-liberty-statue {
+        left: 0;
+        @media all and (max-width: get('responsive.xxl')) {
+            left: -100px;
+        }
+        @media all and (max-width: get('responsive.sm')) {
+            left: -150px;
+        }
+        @media all and (max-width: get('responsive.xs')) {
+            left: -200px;
+        }
+    }
+    &-descr {
+        z-index: 3;
+        position: relative;
+        text-align: center;
+        h2 {
+            margin-bottom: 30px;
+        }
+        .btn {
+            margin-top: 20px;
+        }
+        p {
+            margin: 0;
+            @media all and (max-width: get('responsive.lg')) {
+                max-width: 234px;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+    &-cards {
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        max-width: 680px;
+        height: 100%;
+        bottom: -180px;
+        right: -100px;
+        z-index: 1;
+        @media all and (max-width: get('responsive.xxl')) {
+            right: -200px;
+        }
+        @media all and (max-width: get('responsive.xl')) {
+            right: -400px;
+        }
+        @media all and (max-width: get('responsive.lg')) {
+            max-width: 233px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            top: 0;
+            height: 146px;
+        }
+        @media all and (max-width: get('responsive.xs')) {
+            margin-right: 20px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 260px;
+            left: -300px;
+            right: 0;
+            bottom: calc(-260px + 180px);
+            background-color: #fff;
+            @media all and (max-width: get('responsive.lg')) {
+                display: none;
+            }
+        }
+        &-item {
+            position: absolute;
+            width: 100%;
+            border-radius: 30px;
+            max-width: 680px;
+            transform-origin: left bottom;
+            bottom: 0;
+            left: 0;
+            @media all and (max-width: get('responsive.lg')) {
+                border-radius: 16px;
+            }
+            img {
+                border-radius: 30px;
+                width: 100%;
+                height: auto;
+                @media all and (max-width: get('responsive.lg')) {
+                    border-radius: 16px;
+                }
+            }
+            &.violet {
+                box-shadow: -6px -15px 96px -11px rgba(0, 0, 0, 0.25);
+                transform: rotate(-26.27deg);
+                bottom: 87px;
+                left: -93px;
+                @media all and (max-width: get('responsive.lg')) {
+                    transform: rotate(-20.75deg);
+                    bottom: 32px;
+                    left: -10px;
+                }
+            }
+            &.grey {
+                box-shadow: -15px -6px 96px rgba(0, 0, 0, 0.25);
+                transform: rotate(-15.51deg);
+                bottom: 60px;
+                left: -45px;
+                @media all and (max-width: get('responsive.lg')) {
+                    transform: rotate(-9.99deg);
+                    bottom: 20px;
+                    left: 7px;
+                }
+            }
+            &.black {
+                box-shadow: -19px -9px 75px rgba(0, 0, 0, 0.25);
+                @media all and (max-width: get('responsive.lg')) {
+                    transform: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Mulish:wght@400;800;900&display=swap');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: get('color.neutral.700');
+}
+
+h1 {
+    font: 900 normal rem(58px) / 0.8 get('font.family-h');
+    @media all and (max-width: get('responsive.sm')) {
+        font-size: rem(22px);
+    }
+}
+
+h2 {
+    font: 800 normal rem(36px) / 1.25 get('font.family-h');
+    @media all and (max-width: get('responsive.md')) {
+        font-size: 26px;
+    }
+}
+
+h3 {
+    font: 700 normal rem(24px) / 1.25 get('font.family-h');
+}
+
+p {
+    font: 400 normal rem(16px) / 1.5 get('font.family-t');
+    color: #000000;
+}
+
+.section-title {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.title-underlined {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 5px;
+        background-color: #F1B441;
+    }
+}

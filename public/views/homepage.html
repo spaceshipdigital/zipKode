@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+
+<body>
+    <%= _.template(require('./../includes/svg.html').default)() %>
+        <% var data = {
+        classname: "btn-light",
+        label: "Login",
+        headerClass: ''
+      }; %>
+            <%= _.template(require('./../includes/header.html').default)(data) %>
+                <div id="wrapper">
+                    <div id="main">
+                        <section class="hero">
+                            <div class="container">
+                                <div class="hero-content">
+                                    <h1>SHOP + Ship<br> from the USA
+                                    </h1>
+                                    <h1><span>we deliver worldwide!</span></h1>
+                                    <a href="#" type="button" class="btn btn-secondary">Register For Free</a>
+                                </div>
+                                <div class="hero-logos">
+                                    <ul>
+                                        <li>
+                                            <div class="img-wrapper">
+                                                <img class="bg bg-contain" src="images/dickies.png" alt="#">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img-wrapper">
+                                                <img class="bg bg-contain" src="images/amazon.png" alt="#">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img-wrapper">
+                                                <img class="bg bg-contain" src="images/american-eagle.png" alt="#">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img-wrapper">
+                                                <img class="bg bg-contain" src="images/apple.png" alt="#">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img-wrapper">
+                                                <img class="bg bg-contain" src="images/disney.png" alt="#">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="img-wrapper">
+                                                <img class="bg bg-contain" src="images/target.png" alt="#">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <img class="bg" src="images/hero.jpg" alt="Hero">
+                        </section>
+                        <section class="how-it-works">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="section-title">How it works</h2>
+                                    </div>
+                                </div>
+                                <div class="how-it-works-content">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="how-it-works-card">
+                                                <div class="how-it-works-icon">
+                                                    <img src="images/how-it-works-step1.svg">
+                                                </div>
+                                                <h6>1. Register For Free</h6>
+                                                <p>Sign up for your "ZipKode" virtual address.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="how-it-works-card">
+                                                <div class="how-it-works-icon">
+                                                    <img src="images/how-it-works-step2.svg">
+                                                </div>
+                                                <h6>2. Shop Online</h6>
+                                                <p>Shop in any US store or marketplace and have your parcel delivered to your ZipKode (US address).</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="how-it-works-card">
+                                                <div class="how-it-works-icon">
+                                                    <img src="images/how-it-works-step3.svg">
+                                                </div>
+                                                <h6>3. Deliver to Zipkode</h6>
+                                                <p>Parcel stored in your ZipKode 'locker' until you are ready to ship.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="how-it-works-card">
+                                                <div class="how-it-works-icon">
+                                                    <img src="images/how-it-works-step4.svg">
+                                                </div>
+                                                <h6>4. Get your Parcel</h6>
+                                                <p>Your parcels are sent all over the world.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <a href="#" type="button" class="btn btn-secondary">Learn More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                        <section class="shopper">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xxl-6 col-xl-4 col-lg-6 col">
+                                        <div class="shopper-descr">
+                                            <h2>Your Personal Shopper</h2>
+                                            <p>Now offering a personal shopper service. Simply search for the item you’d like and let your personal shopper know.</p>
+                                            <a href="#" class="btn btn-secondary">Start Shopping</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopper-cards">
+                                <div class="shopper-cards-item violet">
+                                    <img src="images/usbank-violet.png">
+                                </div>
+                                <div class="shopper-cards-item grey">
+                                    <img src="images/usbank-grey.png">
+                                </div>
+                                <div class="shopper-cards-item black">
+                                    <img src="images/usbank-black.png">
+                                </div>
+                            </div>
+                            <div class="shopper-liberty-statue">
+                                <img src="images/liberty-statue.svg">
+                            </div>
+                        </section>
+
+                        <section class="why">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="section-title">Why ZipKode?</h2>
+                                    </div>
+                                </div>
+                                <div class="why-content">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="why-card">
+                                                <div class="why-icon">
+                                                    <img src="images/trolley.svg">
+                                                </div>
+                                                <p>Shop in any U.S. store and ship it to 150 countries of the world.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="why-card">
+                                                <div class="why-icon">
+                                                    <img src="images/delivery-van.svg">
+                                                </div>
+                                                <p>We deliver parcels in a maximum of 14 days.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="why-card">
+                                                <div class="why-icon">
+                                                    <img src="images/lightening.svg">
+                                                </div>
+                                                <p>'Flash' delivery: choose this option and we will send you your package as is. Fast delivery + 10% saving</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="why-card">
+                                                <div class="why-icon">
+                                                    <img src="images/scissors.svg">
+                                                </div>
+                                                <p>We reduce the weight of parcels by removing excess packaging.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="why-card">
+                                                <div class="why-icon">
+                                                    <img src="images/parcel.svg">
+                                                </div>
+                                                <p>We process parcels at customs for free.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="why-card">
+                                                <div class="why-icon">
+                                                    <img src="images/location-pin.svg">
+                                                </div>
+                                                <p>You will be able to track the parcel all the way to the door.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <a href="#" type="button" class="btn btn-secondary">Learn More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section class="faq">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="section-title">Frequently Asked Questions</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="accordion accordion-flush" id="accordionFaq">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Is it possible to order myself from a US site, have me delivered to your warehouse in the United States and then have them sent back to me?
+                                            </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFaq">
+                                                    <div class="accordion-body">
+                                                        <p>
+                                                            Yes, you can order from any US / Canadian / French / Irish / Russian site and have your purchases delivered to ZipKode. This is our parcel relay service from these countries to 150 countries of the world. To do this, you need to create your free customer
+                                                            account in order to instantly benefit from storage space within our premises in Miami, Florida. Take the opportunity to combine your purchases made on different sites to group them into a single
+                                                            package and save on the cost of re-delivery in your country.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    How long can I store my paRcels in your warehouse in the USA?
+                                            </button>
+                                                </h2>
+                                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFaq">
+                                                    <div class="accordion-body">
+                                                        <p>
+                                                            Yes, you can order from any US / Canadian / French / Irish / Russian site and have your purchases delivered to ZipKode. This is our parcel relay service from these countries to 150 countries of the world. To do this, you need to create your free customer
+                                                            account in order to instantly benefit from storage space within our premises in Miami, Florida. Take the opportunity to combine your purchases made on different sites to group them into a single
+                                                            package and save on the cost of re-delivery in your country.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Where do you deliver?
+                                            </button>
+                                                </h2>
+                                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFaq">
+                                                    <div class="accordion-body">
+                                                        <p>
+                                                            Yes, you can order from any US / Canadian / French / Irish / Russian site and have your purchases delivered to ZipKode. This is our parcel relay service from these countries to 150 countries of the world. To do this, you need to create your free customer
+                                                            account in order to instantly benefit from storage space within our premises in Miami, Florida. Take the opportunity to combine your purchases made on different sites to group them into a single
+                                                            package and save on the cost of re-delivery in your country.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <a href="#" class="btn btn-primary">Still have questions? See our FAQ PAGE</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <img class="bg" src="images/faq-bg.jpg" />
+                        </section>
+
+                        <section class="estimates">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="section-title">Get shipping estimates</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form method="get">
+                                            <label for="destination">Select Destination</label>
+                                            <select class="form-select" name="destination" id="destination">
+                                            <option selected>Denver, USA</option>
+                                            <option>Florida, USA</option>
+                                            <option>NY, USA</option>
+                                        </select>
+                                            <button class="btn btn-secondary">Estimate</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="testimonials">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-sm-10 col">
+                                        <div class="testimonials-content">
+                                            <h2 class="section-title">Get shipping estimates</h2>
+
+                                            <div class="testimonials-cards">
+                                                <div id="carousel-testimonials" class="carousel carousel-fade carousel-dark slide" data-bs-ride="carousel">
+                                                    <div class="carousel-indicators">
+                                                        <button type="button" data-bs-target="#carousel-testimonials" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                        <button type="button" data-bs-target="#carousel-testimonials" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                        <button type="button" data-bs-target="#carousel-testimonials" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                    </div>
+                                                    <div class="carousel-inner">
+                                                        <div class="carousel-item active" data-bs-interval="10000">
+                                                            <figure class="testimonials-card" class="d-block w-100">
+                                                                <blockquote>
+                                                                    <p>The last package arrived in 10 days - this is a record! The traditional quality and speed of ZipKode has soared to a level unattainable for competitors!
+                                                                    </p>
+                                                                </blockquote>
+                                                                <figcaption>Colin H.<cite>Oct, 14 2021</cite></figcaption>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="carousel-item" data-bs-interval="10000">
+                                                            <figure class="testimonials-card" class="d-block w-100">
+                                                                <blockquote>
+                                                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis hic, consequatur.
+                                                                    </p>
+                                                                </blockquote>
+                                                                <figcaption>Colin H.<cite>Oct, 14 2021</cite></figcaption>
+                                                            </figure>
+                                                        </div>
+                                                    </div>
+                                                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-testimonials" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                  </button>
+                                                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-testimonials" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                  </button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="signup-cta">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-8 col-lg-12 col">
+                                        <div class="signup-cta-content">
+                                            <h3>Ready to Shop & Ship? Sign up now to get your address.</h3>
+                                            <a href="#" class="btn btn-primary">Sign up for free</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+                <!-- #wrapper -->
+
+                <%= _.template(require('./../includes/footer.html').default)() %>
+</body>
+
+</html>

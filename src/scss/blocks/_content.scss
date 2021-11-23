@@ -1,0 +1,42 @@
+.content {
+    margin: 138px 0 171px;
+    &-column {
+        text-align: center;
+        width: 100%;
+        max-width: 318px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            font-weight: 900;
+            text-transform: initial;
+            +p {
+                margin-top: 43px;
+            }
+        }
+        .btn {
+            margin-top: auto;
+        }
+    }
+    &-divider {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: rgba(0, 0, 0, 0.2);
+            @media all and (max-width: get('responsive.md')) {
+                display: none;
+            }
+        }
+    }
+    &.two-cols {
+        [class^=col]:last-child {
+            margin-top: 50px;
+        }
+    }
+}

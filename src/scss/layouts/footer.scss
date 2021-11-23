@@ -1,0 +1,101 @@
+.footer-main {
+    &-title {
+        font: 800 normal rem(16px) / 1.4 get('font.family-h');
+        color: #000000;
+    }
+    &-logo {
+        @media all and (max-width: get('responsive.xl')) {
+            margin-bottom: 57px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media all and (max-width: get('responsive.md')) {
+            margin-bottom: -20px;
+        }
+    }
+    &-top {
+        background-color: #F2F2F2;
+        padding: 96px 0;
+        @media all and (max-width: get('responsive.md')) {
+            padding: 80px 0;
+        }
+    }
+    &-social {
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            @media all and (max-width: get('responsive.xl')) {
+                margin-top: 55px;
+            }
+            li {
+                list-style: none;
+                display: inline-block;
+                margin: 0 6px;
+            }
+        }
+    }
+    &-menu {
+        @media all and (max-width: get('responsive.md')) {
+            text-align: center;
+            margin-top: 76px;
+        }
+        ul {
+            margin: 14px 0 0;
+            padding: 0;
+            li {
+                list-style: none;
+                margin-bottom: 5px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a {
+                    font: normal normal rem(15px) / 1.4 get('font.family-t');
+                    color: #000000;
+                    text-decoration: none;
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &-bottom {
+        background: #fff;
+        height: 63px;
+        display: flex;
+        align-items: center;
+        @media all and (max-width: get('responsive.md')) { 
+            height: unset;
+            padding: 16px 0;
+        }
+        &-colophone {
+            display: flex;
+            @media all and (max-width: get('responsive.md')) {
+                flex-direction: column;
+            }
+            p,
+            a {
+                margin: 0;
+                font: normal normal rem(14px) / 1.42 get('font.family-t');
+                @media all and (max-width: get('responsive.md')) { 
+                    text-align: center;
+                    margin: 0 auto 5px;
+                }
+            }
+            p {
+                color: #7B7B7B;
+            }
+            a {
+                margin-right: auto;
+                text-decoration: none;
+                color: #000;
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <%= _.template(require('./../includes/svg.html').default)() %>
+        <% var data = {
+        classname: "btn btn-secondary",
+        label: "My Parcels",
+        headerClass: 'logged-in'
+      }; %>
+            <%= _.template(require('./../includes/header.html').default)(data) %>
+                <div id="wrapper">
+                    <div id="main">
+                        <section class="page-title">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="page-title-content">
+                                            <h1>Contact Us</h1>
+                                            <p>Get in touch and let us know how we can help.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="features">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="feature-card">
+                                                <div class="feature-card-icon">
+                                                    <img class="bg bg-contain" src="images/robot-icon.png" alt="robot">
+                                                </div>
+                                                <div class="feature-card-content">
+                                                    <p>Feel free to use our chat bot if you have any queries.</p>
+                                                </div>
+                                                <footer class="feature-card-footer">
+                                                    <a href="#">Chat Bot
+                                                        <svg role="img" class="link-icon">
+                                                            <use xlink:href="#link-icon"></use>
+                                                        </svg>
+                                                    </a>
+                                                </footer>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="feature-card">
+                                                <div class="feature-card-icon">
+                                                    <img class="bg bg-contain" src="images/mail-icon.png" alt="#">
+                                                </div>
+                                                <div class="feature-card-content">
+                                                    <p>If you have a more difficult query, leave us an email and we’ll get back to you in 1-3 business days.</p>
+                                                </div>
+                                                <footer class="feature-card-footer">
+                                                    <a href="#">Write us an Email
+                                                        <svg role="img" class="link-icon">
+                                                            <use xlink:href="#link-icon"></use>
+                                                        </svg>
+                                                    </a>
+                                                </footer>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="feature-card">
+                                                <div class="feature-card-icon">
+                                                    <img class="bg bg-contain" src="images/twitter-icon.png" alt="#">
+                                                </div>
+                                                <div class="feature-card-content">
+                                                    <p>Contact us through our social media, tweet us!</p>
+                                                </div>
+                                                <footer class="feature-card-footer">
+                                                    <a href="#">Tweet Us
+                                                        <svg role="img" class="link-icon">
+                                                            <use xlink:href="#link-icon"></use>
+                                                        </svg>
+                                                    </a>
+                                                </footer>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="wave-bg">
+                                <svg class="svg">
+                                    <clipPath id="page-title-clip-path" clipPathUnits="objectBoundingBox">
+                                        <path d="M1,0 L0,0 V0.978 C0,0.978,0.362,1,0.494,0.866 C0.626,0.658,1,0.806,1,0.806 V0"></path>
+                                    </clipPath>
+                                </svg>
+                            </div>
+                        </section>
+
+                        <section class="content two-cols content-divider">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 d-flex justify-content-center">
+                                        <div class="content-column">
+                                            <h2 class="section-title title-underlined">FAQ</h2>
+                                            <p>If you have a query feel free to check our FAQ for more information. You might find what you’re looking for.</p>
+                                            <a href="#" class="btn btn-primary">Learn More</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 d-flex justify-content-center">
+                                        <div class="content-column">
+                                            <h2 class="section-title title-underlined">How it Works</h2>
+                                            <p>If you’re wondering how this works, we have a page dedicated to showing you how we get your package from the seller to your door while keeping you updated.</p>
+                                            <a href="#" class="btn btn-primary">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <%= _.template(require('./../includes/footer.html').default)() %>
+</body>
+
+</html>

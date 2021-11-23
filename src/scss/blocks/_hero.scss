@@ -1,0 +1,99 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 116px);
+    display: flex;
+    @media all and (max-width: get('responsive.xl')) {
+        height: calc(100vh - 92px);
+    }
+    .btn {
+        margin-top: 40px;
+    }
+    &-content {
+        margin: auto 0;
+        z-index: 4;
+        position: relative;
+    }
+    &:after {
+        content: '';
+        display: block;
+        z-index: 1;
+        height: 100%;
+        position: absolute;
+        width: 40%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(86.74deg, rgba(255, 255, 255, 0.7) 2.28%, rgba(255, 255, 255, 0) 79.76%);
+    }
+    >.container {
+        position: relative;
+        display: flex;
+    }
+    img {
+        z-index: -1;
+    }
+    h1 {
+        span {
+            font-weight: 400;
+            font-size: rem(34px);
+        }
+        @media all and (max-width: get('responsive.sm')) {
+            font-size: rem(16px);
+            line-height: 1.375;
+            span {
+                font-size: rem(16px);
+            }
+        }
+    }
+    &-logos {
+        z-index: 3;
+        background: rgba(255, 255, 255, 0.55);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(18px);
+        border-radius: 20px;
+        position: absolute;
+        bottom: 79px;
+        height: 100px;
+        left: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        @media all and (max-width: get('responsive.md')) {
+            height: 57px;
+        }
+        @media all and (max-width: get('responsive.sm')) {
+            bottom: 30px;
+        }
+        .img-wrapper {
+            height: 46px;
+            position: relative;
+            width: 100%;
+            position: relative;
+            @media all and (max-width: get('responsive.md')) {
+                height: 36px;
+                box-sizing: content-box;
+            }
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            width: 100%;
+            li {
+                width: calc(100% / 6);
+                list-style: none;
+                justify-content: space-between;
+                align-items: center;
+                @media all and (max-width: get('responsive.md')) {
+                    width: calc(100% / 4 - 20px);
+                    margin: 0 10px;
+                    &:nth-child(5),
+                    &:nth-child(1) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

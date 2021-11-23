@@ -1,0 +1,101 @@
+.faq {
+    position: relative;
+    padding: 106px 0 69px;
+    margin-top: 114px;
+    min-height: 500px;
+    @media all and (max-width: get('responsive.md')) {
+        padding: 63px 0 40px;
+    }
+    .section-title {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    }
+    .accordion {
+        margin-top: 50px;
+        position: relative;
+        z-index: 2;
+        border-radius: 35px;
+        background: linear-gradient(85.04deg, rgba(0, 0, 0, 0.9) 9.43%, rgba(196, 196, 196, 0) 101.04%);
+        filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.25));
+        backdrop-filter: blur(21px);
+        border-radius: 35px;
+        &-body {
+            padding: 0 57px 31px 64px;
+            @media all and (max-width: get('responsive.md')) {
+                padding: 0 20px 20px;
+            }
+            * {
+                color: #fff;
+            }
+            p {
+                &:first-child {
+                    margin-top: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-button {
+            background: none;
+            color: #fff;
+            font: 700 normal rem(18px) / 1.2 get('font.family-t');
+            text-transform: uppercase;
+            box-shadow: none !important;
+            @media all and (max-width: get('responsive.md')) {
+                font-size: rem(16px);
+            }
+        }
+        &-item {
+            background: none;
+            position: relative;
+            border: none;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 30px;
+                right: 30px;
+                height: 0.5px;
+                background-color: rgba(255, 255, 255, 0.5);
+                opacity: 0.5;
+                @media all and (max-width: get('responsive.md')) {
+                    left: 20px;
+                    right: 20px;
+                }
+            }
+            &:last-child:after {
+                display: none;
+            }
+        }
+        h2 {
+            padding: 31px 57px 31px 64px;
+            @media all and (max-width: get('responsive.md')) {
+                padding: 20px;
+            }
+        }
+        button {
+            padding: 0;
+            &:focus,
+            &:active {
+                outline: 0;
+                border: 0;
+            }
+        }
+    }
+    .btn-primary {
+        margin-top: 26px;
+        z-index: 3;
+    }
+}

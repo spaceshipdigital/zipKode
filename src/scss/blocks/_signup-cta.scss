@@ -1,0 +1,24 @@
+.signup-cta {
+    padding: 71px 0;
+    background: #000 url('../images/noisy-pattern.jpg') repeat;
+    @media all and (max-width: get('responsive.sm')) {
+        padding: 32px 0 54px;
+    }
+    h3 {
+        color: #fff;
+        text-transform: initial;
+        max-width: 472px;
+        width: 100%;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media all and (max-width: get('responsive.lg')) {
+            flex-direction: column;
+            .btn-primary {
+                margin-top: 48px;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.estimates {
+    margin-top: 120px;
+    @media all and (max-width: get('responsive.md')) {
+        margin-top: 58px;
+    }
+    label {
+        font: normal normal rem(17px) / 1.2 get('font.family-t');
+        color: #000000;
+        text-align: left;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        text-align: center;
+        @media all and (max-width: get('responsive.md')) {
+            flex-direction: column;
+            margin-top: 40px;
+        }
+        select {
+            max-width: 383px;
+            width: 100%;
+            @media all and (max-width: get('responsive.md')) {
+                max-width: 100%;
+                margin-top: 10px;
+            }
+        }
+        .btn-secondary {
+            padding-top: 9px;
+            padding-bottom: 9px;
+            margin-left: 15px;
+            @media all and (max-width: get('responsive.md')) {
+                margin: 27px 0 0;
+            }
+        }
+        label {
+            margin-right: 10px;
+            @media all and (max-width: get('responsive.md')) {
+                align-self: flex-start;
+            }
+        }
+    }
+}

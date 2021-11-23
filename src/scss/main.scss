@@ -1,0 +1,24 @@
+@import './libs/_functions';
+@import './config/variables';
+@import './config/bootstrap-variables';
+@import './libs/_mixins';
+@import './config/global';
+@import './config/svg';
+
+@import "~bootstrap/scss/bootstrap";
+@import './config/typography';
+@import './ui/forms';
+@import './ui/buttons';
+@import './ui/feature-card';
+@import './layouts/header';
+@import './layouts/signup';
+@import './layouts/footer';
+@import './blocks/hero';
+@import './blocks/how-it-works';
+@import './blocks/shopper';
+@import './blocks/why';
+@import './blocks/faq';
+@import './blocks/estimates';
+@import './blocks/testimonials';
+@import './blocks/signup-cta';
+@import './blocks/content';

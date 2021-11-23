@@ -1,0 +1,162 @@
+.main-header {
+    padding: 0 50px;
+    height: 116px;
+    background-color: get('color.neutral.700');
+    display: flex;
+    align-items: center;
+    @media all and (max-width: get('responsive.xl')) {
+        height: 92px;
+    }
+    @media all and (max-width: get('responsive.sm')) {
+        padding: 0 10px;
+    }
+    .action-login {
+        margin-right: 20px;
+        text-decoration: none;
+        display: inline-block;
+    }
+    &-logo {
+        display: block;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        @media all and (max-width: get('responsive.sm')) {
+            max-width: 160px;
+        }
+    }
+    .navbar-toggler {
+        border: none;
+        padding: 0;
+    }
+    .navbar-collapse {
+        background-color: #000;
+        @media all and (max-width: get('responsive.xl')) {
+            position: absolute;
+            width: 300px;
+            right: 0;
+            z-index: 10;
+            top: 92px;
+            padding: 20px 30px;
+        }
+        @media all and (max-width: get('responsive.sm')) {
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    .navbar {
+        display: block;
+        position: unset;
+    }
+    &-nav {
+        margin-left: auto;
+        ul {
+            margin: 0 10px 0 0;
+            padding: 0;
+            @media all and (max-width: get('responsive.xl')) {
+                margin: 0 0 30px 0;
+            }
+            li {
+                display: inline-block;
+                font-size: 0;
+                a {
+                    display: block;
+                    color: #fff;
+                    font: 400 normal rem(18px) / 1.28 get('font.family-h');
+                    padding-left: 9px;
+                    padding: 9px 20px;
+                    position: relative;
+                    text-decoration: none;
+                    @media all and (max-width: get('responsive.xxl')) {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    @media all and (max-width: get('responsive.xl')) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        bottom: 0;
+                        height: 2px;
+                        left: 20px;
+                        right: 20px;
+                        background-color: #FFD23F;
+                        transform: scale(0, 1);
+                        transition: get('transition');
+                        @media all and (max-width: get('responsive.xxl')) {
+                            left: 10px;
+                            right: 10px;
+                        }
+                    }
+                    &:hover {
+                        color: #fff;
+                        cursor: pointer;
+                        &::after {
+                            transform: scale(1, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-info {
+        width: 100%;
+        max-width: 166px;
+        font-size: rem(16px);
+        text-align: left;
+        font-weight: normal;
+        padding: 3px 25px 4px 63px;
+        @media all and (max-width: get('responsive.xl')) {
+            max-width: 100%;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        @media all and (max-width: get('responsive.sm')) {
+            display: flex !important;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 25px;
+        }
+        svg {
+            position: absolute;
+            left: 28px;
+            top: 50%;
+            transform: translateY(-50%);
+            @media all and (max-width: get('responsive.sm')) {
+                position: relative;
+                top: unset;
+                left: unset;
+                transform: none;
+                margin-right: 10px;
+            }
+        }
+    }
+    .btn {
+        margin-left: 10px;
+        @media all and (max-width: get('responsive.xl')) {
+            margin: 10px 0 0;
+            display: block;
+        }
+        &-primary {
+            color: #fff;
+            &:hover {
+                color: get('color.primary.500');
+            }
+        }
+        &-secondary {
+            background-color: #fff;
+            border-color: #fff;
+            color: #000;
+            &:hover {
+                color: get('color.primary.500');
+            }
+        }
+    }
+    &.logged-in .action-signup {
+        display: none;
+    }
+}

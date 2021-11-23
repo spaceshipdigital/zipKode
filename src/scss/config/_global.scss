@@ -1,0 +1,59 @@
+html,
+body {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.bg {
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &-contain {
+        object-fit: contain;
+    }
+}
+
+.page-title {
+    position: relative;
+    width: 100%;
+    .wave-bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        min-height: 734px;
+        clip-path: url(#page-title-clip-path);
+        background: rgb(241, 178, 67);
+        background: linear-gradient(45deg, rgba(241, 178, 67, 1) 0%, rgba(241, 178, 67, 1) 50%, rgba(246, 230, 157, 1) 100%);
+    }
+    &-content {
+        text-align: center;
+        margin-top: 228px;
+        @media all and (max-width: get('responsive.sm')) {
+            margin-top: 50px;
+        }
+        * {
+            color: #fff;
+        }
+        h1 {
+            text-transform: initial;
+        }
+        p {
+            margin-top: 20px;
+            font: 400 normal rem(34px) / 1.26 get('font.family-h');
+            @media all and (max-width: get('responsive.md')) {
+                font-size: rem(18px);
+            }
+        }
+    }
+    .svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+}
