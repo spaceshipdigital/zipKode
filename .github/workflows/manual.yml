@@ -5,6 +5,10 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
         
     steps:
       - name: Clone repo
@@ -13,11 +17,11 @@ jobs:
       - name: Use Node.js 14.15.5
         uses: actions/setup-node@v1
         with:
-          node-version: 14.15.5
+          node-version: ${{ matrix.node-version }}
           
       - name: Build
         run: |
-          npm i 
+          npm ci 
           run: npm run build
           run: tar czfv slug.tgz ./dist
         
