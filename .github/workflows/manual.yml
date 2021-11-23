@@ -1,19 +1,21 @@
 name: Deploy to Heroku
 
-on:
-  push:
-    branches:
-      - master
+on: [push]
       
 jobs:
-  build:
-    runs-on: node:14.15.5
-    steps:
-      - run: npm i 
-      - run: npm run build
-      - run: tar czfv slug.tgz ./dist
-      
   deploy:
+    name: Build
+    steps:
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        cache: 'npm'
+      run: |
+        npm i 
+        run: npm run build
+        run: tar czfv slug.tgz ./dist
+      
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
