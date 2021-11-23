@@ -19,8 +19,10 @@ jobs:
       - name: Build
         run: |
           npm ci 
-          run: npm run build
-          run: tar czfv slug.tgz ./dist
+          npm run build
+          
+      - name: Zip
+        run: tar czfv slug.tgz ./dist
         
       - name: Ls
         run: ls
