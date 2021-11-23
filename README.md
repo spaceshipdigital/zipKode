@@ -1,11 +1,12 @@
 First run:
 1. git clone
-2. cd ./environment
-3. npm i
+2. npm i
 
-Development
-1. cd ./environment
-2. npm start
+Development:
+npm start
+
+Build:
+npm run build
 
 Plain HTML url example:
 http://localhost:8080/homepage.html
@@ -16,13 +17,4 @@ Fonts: ./src/fonts
 JS: ./src/js (index.js is main js file)
 scss: ./src/scss (main.scss is main styles file)
 
-All variables for styles are here: ./src/scss/config/variables.scss
-
-Build
-1. cd ./environment
-2. npm run-script build
-
 All files will be generated in ./dist folder. 
-I use WebpackShellPlugin to copy files to theme after build.
-On Windows main.css and main.js will be copied to theme directory automatically. 
-On MacOS you will have to copy it manually or edit webpack.config.js.
