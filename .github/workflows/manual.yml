@@ -29,5 +29,4 @@ jobs:
          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
          heroku_app_name: "zipkode2"
          heroku_email: "b.boy.bip@gmail.com"
-         usedocker: false
          appdir: 'dist/'
