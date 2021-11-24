@@ -29,4 +29,5 @@ jobs:
          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
          heroku_app_name: "zipkode"
          heroku_email: "b.boy.bip@gmail.com"
+         dontuseforce: true
          appdir: 'dist'
