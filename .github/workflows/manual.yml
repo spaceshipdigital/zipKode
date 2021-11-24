@@ -23,6 +23,10 @@ jobs:
       - name: List Files
         run: ls
 
+      - run: git config user.email "b.boy.bip@gmail.com"
+      - run: git config user.name "taktxbip"
+      - run: git add -A && git commit -m "Updated code"
+
       - name: Push to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with: 
