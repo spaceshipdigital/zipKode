@@ -25,10 +25,6 @@
             max-width: 160px;
         }
     }
-    .navbar-toggler {
-        border: none;
-        padding: 0;
-    }
     .navbar-collapse {
         background-color: #000;
         @media all and (max-width: get('responsive.xl')) {

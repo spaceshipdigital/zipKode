@@ -32,3 +32,12 @@ import '../images/twitter-icon.png';
 
 import '../images/door.jpg';
 
+import '../images/dashboard-parcels-icon.svg';
+import '../images/dashboard-calc-icon.svg';
+import '../images/dashboard-location-icon.png';
+import '../images/dashboard-bag-icon.png';
+import '../images/dashboard-prohibited-icon.png';
+import '../images/dashboard-faq-icon.png';
+import '../images/dashboard-support-icon.png';
+
+import '../images/search-icon.png';

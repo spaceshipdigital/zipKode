@@ -42,6 +42,22 @@ input[type=password] {
     }
 }
 
+input[type=search] {
+    border: 2px solid white;
+    border-radius: 40px;
+    font: 400 normal rem(12px) / 1.16 get('font.family-t');
+    color: #757575;
+    padding: 11px 21px;
+    width: 100%;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    display: none;
+}
+
 .form-check {
     padding: 0;
     margin: 0;
@@ -78,5 +94,26 @@ input[type=password] {
             background-repeat: no-repeat;
             background-size: contain;
         }
+    }
+}
+
+.zipkode-search {
+    width: 100%;
+    max-width: 226px;
+    display: inline-block;
+    position: relative;
+    button {
+        position: absolute;
+        background: transparent;
+        border: none;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 36px;
+    }
+    &-icon {
+        width: 16px;
+        height: 16px;
+        position: relative;
     }
 }
