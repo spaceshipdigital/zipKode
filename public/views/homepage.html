@@ -24,40 +24,7 @@
                                     <h1><span>we deliver worldwide!</span></h1>
                                     <a href="#" type="button" class="btn btn-secondary">Register For Free</a>
                                 </div>
-                                <div class="hero-logos">
-                                    <ul>
-                                        <li>
-                                            <div class="img-wrapper">
-                                                <img class="bg bg-contain" src="images/dickies.png" alt="#">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img-wrapper">
-                                                <img class="bg bg-contain" src="images/amazon.png" alt="#">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img-wrapper">
-                                                <img class="bg bg-contain" src="images/american-eagle.png" alt="#">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img-wrapper">
-                                                <img class="bg bg-contain" src="images/apple.png" alt="#">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img-wrapper">
-                                                <img class="bg bg-contain" src="images/disney.png" alt="#">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="img-wrapper">
-                                                <img class="bg bg-contain" src="images/target.png" alt="#">
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <%= _.template(require('./../includes/hero-logos.html').default)() %>
 
                             </div>
 

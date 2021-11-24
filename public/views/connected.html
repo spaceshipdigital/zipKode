@@ -8,62 +8,28 @@
 
 <body>
     <%= _.template(require('./../includes/svg.html').default)() %>
-    <% var data = {
+        <% var data = {
         classname: "btn btn-secondary",
         label: "My Parcels",
         headerClass: 'logged-in'
       }; %>
-        <%= _.template(require('./../includes/header.html').default)(data) %>
-            <div id="wrapper">
-                <div id="main">
-                    <section class="hero">
-                        <div class="container">
-                            <div class="hero-content">
-                                <h1>Ship from usa<br><span>we deliver worldwide!</span></h1>
-                                <a href="#" type="button" class="btn btn-primary">Sign Up Free</a>
-                            </div>
-                            <div class="hero-logos">
-                                <ul>
-                                    <li>
-                                        <div class="img-wrapper">
-                                            <img class="bg bg-contain" src="images/dickies.png" alt="#">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="img-wrapper">
-                                            <img class="bg bg-contain" src="images/amazon.png" alt="#">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="img-wrapper">
-                                            <img class="bg bg-contain" src="images/american-eagle.png" alt="#">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="img-wrapper">
-                                            <img class="bg bg-contain" src="images/apple.png" alt="#">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="img-wrapper">
-                                            <img class="bg bg-contain" src="images/disney.png" alt="#">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="img-wrapper">
-                                            <img class="bg bg-contain" src="images/target.png" alt="#">
-                                        </div>
-                                    </li>
-                                </ul>
+            <%= _.template(require('./../includes/header.html').default)(data) %>
+                <div id="wrapper">
+                    <div id="main">
+                        <section class="hero">
+                            <div class="container">
+                                <div class="hero-content">
+                                    <h1>Ship from usa<br><span>we deliver worldwide!</span></h1>
+                                    <a href="#" type="button" class="btn btn-primary">Sign Up Free</a>
+                                </div>
+                                <%= _.template(require('./../includes/hero-logos.html').default)() %>
                             </div>
 
-                        </div>
+                            <img class="bg" src="images/hero.jpg" alt="Hero">
+                        </section>
 
-                        <img class="bg" src="images/hero.jpg" alt="Hero">
-                    </section>
-
+                    </div>
                 </div>
-            </div>
 </body>
 
 </html>
