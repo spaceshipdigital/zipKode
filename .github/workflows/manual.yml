@@ -23,15 +23,10 @@ jobs:
       - name: List Files
         run: ls
         
-      - name: Show dist
-        run: |
-          cd dist
-          ls
-        
-#       - name: Push to Heroku
-#         uses: akhileshns/heroku-deploy@v3.12.12
-#         with: 
-#          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-#          heroku_app_name: "zipkode"
-#          heroku_email: "b.boy.bip@gmail.com"
-#          appdir: 'dist'
+      - name: Push to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with: 
+         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+         heroku_app_name: "zipkode"
+         heroku_email: "b.boy.bip@gmail.com"
+         appdir: 'dist'
