@@ -9,7 +9,7 @@ $config: deep-map-merge(
         'borders': ( 'radius-smaller': 3px, 'radius': 4px, 'radius-bigger': 6px), 
         'color': ( 
             'primary': ( '500': #FDB733,  '400': #F8CD41), 
-            'neutral': ( '700': #000, '500': #4B4B4B),
+            'neutral': ( '700': #000, '500': #4B4B4B, '200': #DDE1E6),
             'semantic': ( 'red': #CF2850)
         ), 
         'transition': .3s ease-in-out,

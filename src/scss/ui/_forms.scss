@@ -1,5 +1,8 @@
 label {
     font: normal normal rem(14px) / 1.21 get('font.family-t');
+    .required {
+        color: get('color.semantic.red');
+    }
 }
 
 .form-select {
@@ -17,4 +20,63 @@ label {
 
 .form-row {
     margin-top: 23px;
+    label {
+        margin-bottom: 6px;
+    }
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+    background: #FFFFFF;
+    border: 2px solid get('color.neutral.200');
+    border-radius: 8px;
+    color: get('color.neutral.700');
+    font-size: rem(14px);
+    font-weight: 400;
+    padding: 10px 16px 9px;
+    &:focus,
+    &:hover {
+        cursor: text;
+        border-color: get('color.neutral.700');
+    }
+}
+
+.form-check {
+    padding: 0;
+    margin: 0;
+    margin-top: 2px;
+    input[type=checkbox] {
+        display: none;
+        &:checked+label {
+            &:before {
+                background-color: #343A3F;
+                outline-color: transparent;
+            }
+        }
+    }
+    label {
+        padding-left: 20px;
+        font: 400 normal rem(13px) / 1.23 get('font.family-t');
+        color: #797979;
+        position: relative;
+        a {
+            color: inherit;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            outline: 1px solid #ABABAB;
+            margin-right: 8px;
+            margin-bottom: -2px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='14px' height='14px' viewBox='0 0 14 14' fill='%23FFFFFF'%3E%3Cpath d='M14,0.5v3.6l-8.9,8.9c-0.6,0.6-1.5,0.6-2.1,0L0,10.1V6.5c0.4,0,0.8,0.2,1.1,0.4L4,9.9l8.9-8.9 C13.2,0.6,13.6,0.5,14,0.5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
 }

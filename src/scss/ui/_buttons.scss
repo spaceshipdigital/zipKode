@@ -1,11 +1,16 @@
 .btn {
-    font: 900 normal rem(18px) / 1.22 get('font.family-t');
+    font-weight: 900;
+    font-size: normal;
+    font-size: rem(18px);
+    font-family: get('font.family-t');
     align-items: center;
     border-width: 2px;
     border-style: solid;
     padding: 12px 25px;
     border-radius: 50px;
     position: relative;
+    display: inline-block;
+    text-decoration: none;
     &-primary {
         text-transform: uppercase;
         color: get('color.neutral.700');
