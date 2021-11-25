@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 function animateLogos() {
     const heroLogos = document.querySelectorAll('.hero-logos');
-    const delay = 500;
+    const delay = 3000;
     let i = 0
 
     if (heroLogos.length) {
