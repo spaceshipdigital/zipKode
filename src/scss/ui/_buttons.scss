@@ -1,5 +1,5 @@
 .btn {
-    font-weight: 900;
+    font-weight: 700;
     font-size: normal;
     font-size: rem(18px);
     font-family: get('font.family-t');
@@ -52,6 +52,17 @@
             border-color: #FFD23F;
         }
     }
+    &-ghost {
+        color: #000;
+        border-color: #000;
+        text-transform: initial;
+        padding: 6px 25px;
+        &:hover {
+            cursor: pointer;
+            color: #FFD23F;
+            border-color: #FFD23F;
+        }
+    }
 }
 
 .carousel {
@@ -74,4 +85,12 @@
 .navbar-toggler {
     border: none;
     padding: 0;
+}
+
+.btn-small {
+    text-align: center;
+}
+
+.dashboard .btn {
+    padding: 8px 25px;
 }

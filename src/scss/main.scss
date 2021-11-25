@@ -6,10 +6,13 @@
 @import './config/svg';
 @import "~bootstrap/scss/bootstrap";
 @import './config/typography';
+@import './ui/steps';
 @import './ui/forms';
 @import './ui/buttons';
 @import './ui/feature-card';
+@import './ui/cards';
 @import './layouts/header';
+@import './layouts/dashboard-header';
 @import './layouts/signup';
 @import './layouts/footer';
 @import './layouts/dashboard-sidebar';
@@ -22,3 +25,5 @@
 @import './blocks/testimonials';
 @import './blocks/signup-cta';
 @import './blocks/content';
+@import './dashboard/main-dashboard';
+@import './dashboard/calculator-dashboard';

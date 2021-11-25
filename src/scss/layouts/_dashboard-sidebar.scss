@@ -56,8 +56,75 @@
             order: 2;
         }
     }
+    &-account,
     &-colophone {
         display: none;
+        @media all and (max-width: get('responsive.lg')) {
+            display: block;
+        }
+    }
+    &-credit {
+        padding-left: 32px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        @media all and (max-width: get('responsive.sm')) {
+            flex-wrap: wrap;
+        }
+        .label {
+            color: #fff;
+            font-weight: 400;
+            font-size: rem(14px);
+        }
+        .balance {
+            color: #fff;
+            font-weight: 800;
+            font-size: rem(18px);
+            font-family: get('font.family-h');
+            margin-left: auto;
+        }
+        .btn-small {
+            text-decoration: none;
+            font: 700 normal rem(16px) / 1.25 get('font.family-h');
+            text-transform: uppercase;
+            border: 1px solid #FDB733;
+            border-radius: 8px;
+            color: #FDB733;
+            padding: 1px 12px;
+            margin-right: 0;
+            margin-left: 13px;
+            @media all and (max-width: get('responsive.xs')) {
+                margin-top: 5px;
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    }
+    &-welcome {
+        position: relative;
+        .person-icon {
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+        }
+    }
+    &-person {
+        padding-left: 32px;
+        span {
+            font: 700 normal rem(16px) / 1.25 get('font.family-h');
+            color: #fff;
+        }
+        p {
+            font: 300 normal rem(15px) / 1.26 get('font.family-h');
+            color: #DBDBDB;
+            margin-bottom: 16px;
+        }
+    }
+    &-account {
+        padding: 0 10px;
+    }
+    &-colophone {
         padding: 0 10px 20px;
         margin: 0;
         width: 100%;
@@ -73,24 +140,27 @@
                 color: #fff;
                 font: 400 normal rem(18px) / 1.4 get('font.family-h');
                 text-decoration: none;
-                display: block; 
+                display: block;
                 &:hover {
                     cursor: pointer;
                     color: #FFD23F;
                 }
             }
         }
-        @media all and (max-width: get('responsive.lg')) {
-            display: block;
-        }
     }
     &-nav {
         padding: 0;
         margin: 0;
         width: 100%;
+        @media all and (max-width: get('responsive.lg')) {
+            margin-top: 21px;
+        }
         li {
             display: block;
             margin-bottom: 26px;
+            @media all and (max-width: get('responsive.lg')) {
+                margin-bottom: 8px;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
@@ -105,6 +175,7 @@
                 transition: color get('transition');
                 @media all and (max-width: get('responsive.lg')) {
                     font-size: rem(18px);
+                    padding-left: 55px;
                 }
                 &:after {
                     content: '';
@@ -123,10 +194,16 @@
                     color: #FFD23F;
                     &:after {
                         transform: scaleX(0.3);
+                        @media all and (max-width: get('responsive.lg')) {
+                            transform: scaleX(0.2);
+                        }
                     }
                 }
                 &.active:after {
                     transform: scaleX(1);
+                    @media all and (max-width: get('responsive.lg')) {
+                        transform: scaleX(0.5);
+                    }
                 }
             }
         }
@@ -140,6 +217,7 @@
         transform: translateY(-50%);
         display: inline-flex;
         @media all and (max-width: get('responsive.lg')) {
+            left: 9px;
             width: 26px;
             height: 27px;
         }
@@ -153,7 +231,7 @@
         @media all and (max-width: get('responsive.lg')) {
             position: absolute;
             background: #000;
-            width: 300px;
+            width: 360px;
             right: 0;
         }
         @media all and (max-width: get('responsive.sm')) {
@@ -182,6 +260,15 @@
         min-height: 100vh;
         @media all and (max-width: get('responsive.lg')) {
             padding: 36px;
+        }
+        @media all and (max-width: get('responsive.lg')) {
+            padding: 36px 10px;
+        }
+        .wrap {
+            margin-top: 48px;
+            @media all and (max-width: get('responsive.lg')) {
+                margin-top: 0;
+            }
         }
     }
 }

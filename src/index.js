@@ -16,6 +16,13 @@ import './js/assets';
 
 window.addEventListener('DOMContentLoaded', (event) => {
     animateLogos();
+
+    const actionCopyAddress = document.querySelectorAll('.action-copy-address');
+    actionCopyAddress.forEach(el => {
+        el.addEventListener('click', (e) =>{
+            console.log('copied');
+        })
+    })
 });
 
 function animateLogos() {

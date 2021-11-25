@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <%= _.template(require('./../includes/svg-dashboard.html').default)() %>
+        <div id="wrapper">
+            <div id="main">
+                <div class="dashboard">
+                    <%= _.template(require('./../includes/dashboard-sidebar.html').default)() %>
+                        <div class="dashboard-content">
+                            <%= _.template(require('./../includes/header-dashboard.html').default)() %>
+                                <div class="wrap address-dashboard">
+                                    <h1 class="dashboard-title">My Warehouse Address</h1>
+                                    <div class="address-dashboard-wrap">
+                                        <div class="address-card" id="address-card">
+                                            <header class="address-card-top">
+                                                For an order in USA
+                                            </header>
+                                            <div class="address-card-body">
+                                                <p>Colin Hanley<br>ZPK 107862<br>314 Robinson Lane,<br>Wilmington, DE 19805,<br>USA</p>
+                                            </div>
+                                        </div>
+                                        <span class="btn btn-secondary action-copy-address" data-card="address-card">Copy My Address</span>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

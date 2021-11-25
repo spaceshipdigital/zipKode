@@ -1,0 +1,37 @@
+.main-dashboard {
+    width: 100%;
+    max-width: 680px;
+    &-welcome {
+        padding-left: 60px;
+        @media all and (max-width: get('responsive.sm')) {
+            padding-left: 0;
+        }
+        h1 {
+            text-transform: initial;
+            font: 700 normal rem(28px) / 1.2 get('font.family-h');
+            color: #000000;
+        }
+        p {
+            margin-top: 20px;
+            font-size: rem(18px);
+            color: #231F20;
+        }
+    }
+}
+
+.address-dashboard {
+    &-wrap {
+        max-width: 466px;
+        width: 100%;
+    }
+    .address-card {
+        max-width: 100%;
+        display: block;
+    }
+    .action-copy-address {
+        margin-top: 30px;
+        margin-left: auto;
+        display: table;
+    }
+}
+

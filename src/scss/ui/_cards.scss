@@ -1,0 +1,32 @@
+.address-card {
+    display: inline-block;
+    max-width: 393px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    &-top {
+        background-color: #FFBE44;
+        padding: 13px 16px;
+        border-radius: 8px 8px 0 0;
+        text-transform: uppercase;
+        font: 600 normal rem(16px) / 1.25 get('font.family-t');
+        color: #000000;
+    }
+    &-body {
+        padding: 30px 16px 25px;
+        p {
+            font: 400 normal rem(16px) / 1.25 get('font.family-h');
+            color: #4F4F4F;
+        }
+        .btn-ghost {
+            display: table;
+            margin: 0 auto 0;
+        }
+    }
+}
+
+.dashboard-title+.address-card {
+    margin-top: 0;
+}

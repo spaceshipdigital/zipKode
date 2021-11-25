@@ -27,6 +27,7 @@ label {
 
 input[type=text],
 input[type=email],
+input[type=number],
 input[type=password] {
     background: #FFFFFF;
     border: 2px solid get('color.neutral.200');
@@ -62,8 +63,19 @@ input[type=search]::-webkit-search-results-decoration {
     padding: 0;
     margin: 0;
     margin-top: 2px;
+    input[type=radio],
     input[type=checkbox] {
         display: none;
+    }
+    input[type=checkbox] {
+        &:checked+label {
+            &:before {
+                background-color: #343A3F;
+                outline-color: transparent;
+            }
+        }
+    }
+    input[type=radio] {
         &:checked+label {
             &:before {
                 background-color: #343A3F;
@@ -73,16 +85,28 @@ input[type=search]::-webkit-search-results-decoration {
     }
     label {
         padding-left: 20px;
-        font: 400 normal rem(13px) / 1.23 get('font.family-t');
-        color: #797979;
         position: relative;
-        a {
-            color: inherit;
-        }
         &:before {
             content: '';
             position: absolute;
             left: 0;
+        }
+        a {
+            color: inherit;
+        }
+    }
+    input[type=radio]+label {
+        &:before {
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    }
+    input[type=checkbox]+label {
+        font: 400 normal rem(13px) / 1.23 get('font.family-t');
+        color: #797979;
+        &:before {
             display: inline-block;
             width: 14px;
             height: 14px;

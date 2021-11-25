@@ -1,0 +1,100 @@
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    @media all and (max-width: get('responsive.lg')) {
+        display: none;
+    }
+    &-balance {
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: 20px;
+        min-width: 203px;
+        * {
+            font: normal normal rem(18px) / 1.25 get('font.family-h');
+            color: #000;
+            &.label {
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+        }
+        .label,
+        .balance {
+            text-align: center;
+            display: block;
+        }
+    }
+    .icon {
+        position: relative;
+        width: 34px;
+        height: 29px;
+        margin: 0 auto;
+    }
+    &-account {
+        font: 300 normal rem(16px) / 1.25 get('font.family-h');
+        color: #303030;
+    }
+    &-btn {
+        text-align: center;
+        display: block;
+        border: none;
+        border-radius: 8px;
+        min-width: 124px;
+        padding: 5px 10px;
+        &::after {
+            display: none;
+        }
+        span {
+            font: 700 normal rem(16px) / 1.25 get('font.family-h');
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+    }
+    .myaccount-btn {
+        background-color: #231F20;
+    }
+    .topup-btn {
+        background-color: #FDB733;
+    }
+    .btn-group {
+        margin-left: 15px;
+    }
+    .dropdown-menu {
+        padding: 18px;
+        border-radius: 8px;
+        border: none;
+        background-color: #231F20;
+        position: relative;
+        top: 12px !important;
+        &:before {
+            top: -11px;
+            right: 40px;
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 11px 11px 11px;
+            border-color: transparent transparent #231F20 transparent;
+        }
+        .name {
+            color: #fff;
+            font: 700 normal rem(16px) / 1.25 get('font.family-h');
+        }
+        ul {
+            padding: 0;
+            margin: 5px 0 0;
+            li {
+                list-style: none;
+                a {
+                    color: #fff;
+                    font: 400 normal rem(16px) / 1.25 get('font.family-h');
+                    &:hover {
+                        background: none;
+                        color: #FFD23F;
+                    }
+                }
+            }
+        }
+    }
+}

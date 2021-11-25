@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <%= _.template(require('./../includes/svg-dashboard.html').default)() %>
+        <div id="wrapper">
+            <div id="main">
+                <div class="dashboard">
+                    <%= _.template(require('./../includes/dashboard-sidebar.html').default)() %>
+                        <div class="dashboard-content">
+                            <%= _.template(require('./../includes/header-dashboard.html').default)() %>
+                                <div class="wrap main-dashboard">
+                                    <div class="main-dashboard-welcome">
+                                        <h1>Welcome Colin!</h1>
+                                        <p>Now that you have your new virtual ZipKode address, you can use that address to shop on almost any site!</p>
+                                    </div>
+                                    <ol class="steps">
+                                        <li>
+                                            <h3>Shop online at your favorite stores</h3>
+                                        </li>
+                                        <li>
+                                            <h3>Use your ZipKode address at checkout</h3>
+                                            <div class="address-card" id="address-card">
+                                                <header class="address-card-top">
+                                                    For an order in USA
+                                                </header>
+                                                <div class="address-card-body">
+                                                    <p>Colin Hanley<br>ZPK 107862<br>314 Robinson Lane,<br>Wilmington, DE 19805,<br>USA</p>
+                                                    <span class="btn btn-ghost action-copy-address" data-card="address-card">Copy Address</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h3>Pre-Alert the arrival of a parcel (highly recommended)</h3>
+                                            <ul>
+                                                <li>
+                                                    <p>For a faster handling of your parcel you can, from the reception of your tracking number by your provider, register your parcel on your account.</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h3>We receive your order</h3>
+                                            <ul>
+                                                <li>
+                                                    <p>We receive and control your order.</p>
+                                                </li>
+                                                <li>
+                                                    <p>You receive an email to notify you.</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h3>We ship your parcel back to you</h3>
+                                            <ul>
+                                                <li>
+                                                    <p>We combine all your purchases into one parcel to save money.</p>
+                                                </li>
+                                                <li>
+                                                    <p>When you are ready, we ship to your address!</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

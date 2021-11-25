@@ -1,0 +1,83 @@
+.steps {
+    list-style: none;
+    padding: 0 0 0 60px;
+    margin-top: 90px;
+    @media all and (max-width: get('responsive.sm')) {
+        padding-left: 40px;
+        margin-top: 50px;
+    }
+    >li {
+        margin: 0;
+        padding: 0 0 35px;
+        display: block;
+        position: relative;
+        counter-increment: inst;
+        &:before {
+            content: counter(inst);
+            background: #FDB733;
+            box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            left: -60px;
+            z-index: -1;
+            margin-top: 4px;
+            @media all and (max-width: get('responsive.sm')) {
+                left: -40px;
+                margin-top: 0;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: calc(-60px + 13px);
+            top: 28px;
+            bottom: -14px;
+            width: 3px;
+            background-color: #C1C1C1;
+            z-index: -2;
+            @media all and (max-width: get('responsive.sm')) {
+                left: calc(-40px + 13px);
+            }
+        }
+        &:last-child:after {
+            display: none;
+        }
+        h3 {
+            font: 400 normal rem(28px) / 1.25 get('font.family-h');
+            color: #000000;
+            text-transform: initial;
+            @media all and (max-width: get('responsive.sm')) {
+                font-size: rem(22px);
+            }
+        }
+        ul {
+            padding: 0;
+            margin-top: 14px;
+            li {
+                list-style: none;
+                padding-left: 20px;
+                position: relative;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    background-color: #4B4B4B;
+                    border-radius: 50%;
+                    left: 5px;
+                    top: 6px;
+                }
+                p {
+                    font: 400 normal rem(16px) / 1.25 get('font.family-t');
+                    color: #4B4B4B;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

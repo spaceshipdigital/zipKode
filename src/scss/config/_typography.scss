@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Mulish:wght@400;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;800;900&display=swap');
 h1,
 h2,
 h3,
@@ -44,7 +44,7 @@ p {
     position: relative;
     display: inline-block;
     padding-bottom: 8px;
-    &:after{
+    &:after {
         content: '';
         display: block;
         position: absolute;
@@ -54,4 +54,11 @@ p {
         height: 5px;
         background-color: #F1B441;
     }
+}
+
+.dashboard-title {
+    font: 400 normal rem(35px) / 1.25 get('font.family-h');
+    color: #6F6F6F;
+    text-transform: initial;
+    margin-bottom: 48px;
 }

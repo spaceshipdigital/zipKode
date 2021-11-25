@@ -41,3 +41,6 @@ import '../images/dashboard-faq-icon.png';
 import '../images/dashboard-support-icon.png';
 
 import '../images/search-icon.png';
+
+import '../images/topup-icon.svg';
+import '../images/my-account-icon.png';

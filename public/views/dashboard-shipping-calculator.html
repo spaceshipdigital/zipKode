@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <%= _.template(require('./../includes/svg-dashboard.html').default)() %>
+        <div id="wrapper">
+            <div id="main">
+                <div class="dashboard">
+                    <%= _.template(require('./../includes/dashboard-sidebar.html').default)() %>
+                        <div class="dashboard-content">
+                            <%= _.template(require('./../includes/header-dashboard.html').default)() %>
+                                <div class="wrap calculator-dashboard">
+                                    <h1 class="dashboard-title">Shipping Calculator</h1>
+                                    <div class="calculator-dashboard-wrap">
+                                        <div class="calc">
+                                            <h2>Simulate your transportation costs</h2>
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <label for="country">From our warehouse to</label>
+                                                            <select class="form-select" name="country" id="country">
+                                                            <option selected>France</option>
+                                                            <option>UK</option>
+                                                            <option>Canada</option>
+                                                        </select>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label for="weight">Weight</label>
+                                                            <input type="text" name="weight" id="weight">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="row d-flex justify-content-space-between">
+                                                        <div class="col-4">
+                                                            <label for="country">Total price of all goods</label>
+                                                            <input type="text" name="price" id="price">
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>The price of insurance depends on the price of the goods:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>1001 - 6001 insurance +51</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>600$ - 1000$ insurance +7.50$</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>1001$ - 1300$ insurance +15$</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row ">
+                                                    <div class="row d-flex justify-content-space-between">
+                                                        <div class="col-4">
+                                                            <label for="qty">Accept incoming parcel</label>
+                                                            <input type="number" name="qty" id="qty" value="1">
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <label for="country">Is your parcel bulky?</label>
+                                                            <div class="form-check form-check-radio">
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                <label class="form-check-label" for="flexRadioDefault1">Yes</label>
+                                                            </div>
+                                                            <div class="form-check ">
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                                <label class="form-check-label" for="flexRadioDefault2">No</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <input type="submit" class="btn btn-secondary" value="Calculate Delivery">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="calc-results">
+                                            <table>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
