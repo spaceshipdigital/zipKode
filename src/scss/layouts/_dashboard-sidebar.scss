@@ -7,6 +7,24 @@
     background-color: get('color.neutral.700');
     width: 100%;
     max-width: 340px;
+    hr {
+        display: none;
+        opacity: 1;
+        background-color: #626262;
+        width: calc(100% - 20px);
+        border: none;
+        height: 1px;
+        margin: 21px auto 0;
+        @media all and (max-width: get('responsive.lg')) {
+            display: block;
+        }
+    }
+    .navbar-toggler {
+        @media all and (max-width: get('responsive.lg')) {
+            height: 100%;
+            padding-left: 50px;
+        }
+    }
     @media all and (max-width: get('responsive.lg')) {
         padding: 0;
         position: relative;
@@ -21,13 +39,49 @@
         @media all and (max-width: get('responsive.lg')) {
             order: 1;
             margin-left: 10px;
+            height: 92px;
+            max-width: 160px;
+            display: flex;
+            img {
+                margin: auto auto auto 0;
+                width: 100%;
+            }
         }
     }
     &-navbar {
         margin-top: 42px;
         @media all and (max-width: get('responsive.lg')) {
+            margin-top: 0;
             margin-right: 10px;
             order: 2;
+        }
+    }
+    &-colophone {
+        display: none;
+        padding: 0 10px 20px;
+        margin: 0;
+        width: 100%;
+        margin-top: 21px;
+        li {
+            list-style: none;
+            display: block;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                color: #fff;
+                font: 400 normal rem(18px) / 1.4 get('font.family-h');
+                text-decoration: none;
+                display: block; 
+                &:hover {
+                    cursor: pointer;
+                    color: #FFD23F;
+                }
+            }
+        }
+        @media all and (max-width: get('responsive.lg')) {
+            display: block;
         }
     }
     &-nav {
@@ -48,6 +102,10 @@
                 display: block;
                 position: relative;
                 width: 100%;
+                transition: color get('transition');
+                @media all and (max-width: get('responsive.lg')) {
+                    font-size: rem(18px);
+                }
                 &:after {
                     content: '';
                     display: block;
@@ -58,9 +116,11 @@
                     bottom: 0;
                     top: 0;
                     transform: scaleX(0);
+                    transform-origin: left center;
                     transition: transform get('transition');
                 }
                 &:hover {
+                    color: #FFD23F;
                     &:after {
                         transform: scaleX(0.3);
                     }
@@ -79,6 +139,10 @@
         top: 50%;
         transform: translateY(-50%);
         display: inline-flex;
+        @media all and (max-width: get('responsive.lg')) {
+            width: 26px;
+            height: 27px;
+        }
         img {
             display: block;
             margin: auto;
@@ -86,6 +150,16 @@
     }
     .navbar-collapse {
         width: 100%;
+        @media all and (max-width: get('responsive.lg')) {
+            position: absolute;
+            background: #000;
+            width: 300px;
+            right: 0;
+        }
+        @media all and (max-width: get('responsive.sm')) {
+            width: 100%;
+            left: 0;
+        }
     }
     &-search {
         margin-top: 44px;

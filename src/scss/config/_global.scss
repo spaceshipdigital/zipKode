@@ -107,8 +107,8 @@ body {
                 top: 40%;
             }
         }
-        &:hover {
-            transform: rotateX( 90deg) translateZ(23px);
-        }
+    }
+    &.active .logo-3d-item {
+        transform: rotateX( 90deg) translateZ(23px);
     }
 }
