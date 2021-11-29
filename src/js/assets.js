@@ -49,3 +49,5 @@ import '../images/dhl.jpg';
 import '../images/fedex.jpg';
 import '../images/fedex-economy.jpg';
 import '../images/box.jpg';
+
+import '../images/info-icon.png';

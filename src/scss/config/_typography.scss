@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Mulish:wght@300;400;700;800;900&display=swap');
 h1,
 h2,
 h3,
@@ -63,6 +63,7 @@ p {
     }
     p {
         margin-top: 24px;
+        color: #595959;
     }
     h1 {
         font: 400 normal rem(35px) / 1.25 get('font.family-h');

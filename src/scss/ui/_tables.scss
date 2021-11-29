@@ -1,3 +1,35 @@
+table {
+    border-collapse: collapse;
+}
+
+table.responsive {
+    @media all and (max-width: get('responsive.md')) {
+        thead {
+            display: none;
+        }
+    }
+    tr {
+        td {
+            @media all and (max-width: get('responsive.md')) {
+                display: block;
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: right;
+                border: 1px solid #ccc;
+                border-bottom: none;
+                &:last-child {
+                    border-bottom: 1px solid #ccc;
+                }
+                &:before {
+                    content: attr(data-label);
+                    float: left;
+                    font: 600 normal rem(14px) / 1.2 get('font.family-t');
+                }
+            }
+        }
+    }
+}
+
 .table-default {
     width: 100%;
     border-collapse: collapse;
@@ -19,31 +51,12 @@
                     padding-right: 10px;
                 }
             }
-            @media all and (max-width: get('responsive.md')) {
-                display: block;
-                width: 100% !important;
-                max-width: 100% !important;
-                text-align: right;
-                border: 1px solid #ccc;
-                border-bottom: none;
-                &:last-child {
-                    border-bottom: 1px solid #ccc;
-                }
-                &:before {
-                    content: attr(data-label);
-                    float: left;
-                    font: 600 normal rem(14px) / 1.2 get('font.family-t');
-                }
-            }
         }
     }
     thead {
         th {
             font: 600 normal rem(14px) / 1.2 get('font.family-t') !important;
             color: #000;
-        }
-        @media all and (max-width: get('responsive.md')) {
-            display: none;
         }
     }
     tbody tr {
@@ -205,6 +218,36 @@
     }
     .send {
         text-align: right;
+    }
+}
+
+table.summary {
+    width: 100%;
+    th,
+    td {
+        padding: 12px 17px;
+    }
+    thead {
+        tr {
+            th {
+                background-color: #2F2F2F;
+                color: #fff;
+                font: 500 normal rem(16px) / 1.25 get('font.family-t');
+                &:first-child {
+                    border-radius: 8px 0 0 0;
+                }
+                &:last-child {
+                    border-radius: 0 8px 0 0;
+                }
+            }
+        }
+    }
+    tfoot {
+        tr {
+            td {
+                background-color: #C7C7C7;
+            }
+        }
     }
 }
 

@@ -14,7 +14,6 @@
     &-primary {
         text-transform: uppercase;
         color: get('color.neutral.700');
-        border-radius: 50px;
         border-color: get('color.primary.400');
         &:hover {
             cursor: pointer;
@@ -61,6 +60,12 @@
             cursor: pointer;
             color: #FFD23F;
             border-color: #FFD23F;
+        }
+    }
+    &-rect {
+        border-radius: 8px;
+        &:hover {
+            border-radius: 8px;
         }
     }
 }
@@ -172,5 +177,27 @@
     &:after {
         height: 100%;
         width: 1px;
+    }
+}
+
+.label-tooltip {
+    [data-bs-toggle] {
+        width: 15px;
+        height: 15px;
+        position: relative;
+        display: inline-block;
+        border: none;
+        border-radius: 50%;
+        margin-left: 2px;
+        margin-bottom: -3px;
+        overflow: hidden;
+        padding: 0;
+        img {
+            line-height: 24px;
+            display: block;
+        }
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

@@ -1,0 +1,47 @@
+<div class="modal fade" id="modal-pay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Order Summary</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="summary">
+                    <thead>
+                        <tr>
+                            <th>Package code</th>
+                            <th>Name</th>
+                            <th>Delivery</th>
+                            <th class="price">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Boots</td>
+                            <td>Fedex International</td>
+                            <td class="price">$44.25</td>
+                        </tr>
+                        <tr class="additional">
+                            <td colspan="3">
+                                <span class="label">Option</span>Additional inner packaging
+                            </td>
+                            <td class="price">$1.00</td>
+                        </tr>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">
+                                    Total
+                                </td>
+                                <td>$45.25</td>
+                            </tr>
+                        </tfoot>
+                    </tbody>
+                </table>
+                <form id="pay-form">
+                    <button type="submit" class="btn btn-rect btn-primary">Pay</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

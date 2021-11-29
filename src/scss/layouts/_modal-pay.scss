@@ -1,0 +1,47 @@
+#modal-pay {
+    .price {
+        text-align: right;
+    }
+    #pay-form {
+        text-align: center;
+        margin-top: 40px;
+        button[type=submit] {
+            min-width: 120px;
+        }
+    }
+    .modal-header {
+        padding-top: 40px;
+    }
+    tbody {
+        td {
+            font-family: get('font.family-t');
+            background-color: #FCFCFC;
+        }
+        .additional {
+            .label {
+                display: block;
+                font: 300 normal rem(15px) / 1.25 get('font.family-h');
+                color: #000000;
+            }
+        }
+    }
+    tfoot {
+        td {
+            font-weight: 700;
+            font-size: rem(20px);
+            text-align: right;
+            color: #000000;
+            &:first-child {
+                border-radius: 0 0 0 8px;
+            }
+            &:last-child {
+                border-radius: 0 0 8px 0;
+            }
+        }
+        [colspan="3"] {
+            font: 400 normal rem(20px) / 1.25 get('font.family-t');
+            text-transform: uppercase;
+            text-align: right;
+        }
+    }
+}

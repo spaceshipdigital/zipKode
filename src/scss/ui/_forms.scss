@@ -93,7 +93,7 @@ input[type=search]::-webkit-search-results-decoration {
         position: relative;
         &:before {
             content: '';
-            position: absolute;
+            margin-left: -20px;
             left: 0;
         }
         a {
@@ -160,6 +160,71 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .qbox {
+    label {
+        display: block;
+    }
+    select,
+    input[type=number],
+    input[type=text] {
+        width: 100%;
+    }
+    .steps-container {
+        margin-top: 40px;
+        @media all and (max-width: get('responsive.sm')) {
+            .form-row .row > div:not(:first-child) {
+                margin-top: 16px;
+            }
+        }
+    }
+    .step {
+        display: none;
+        .form-row:first-child {
+            margin-top: 0;
+        }
+        &.show {
+            display: block;
+        }
+    }
+    .options {
+        margin-top: 40px;
+        label {
+            font-size: rem(16px) !important;
+            color: #000000 !important;
+            &.label-ttu {
+                text-transform: uppercase;
+                color: #000;
+                font: 700 normal rem(18px) / 1.2 get('font.family-t') !important;
+            }
+        }
+        label+p {
+            font: 400 italic rem(14px) / 1.2 get('font.family-t');
+            padding-left: 20px;
+            color: #000000;
+        }
+    }
+    h5 {
+        font: 300 normal rem(24px) / 1.2 get('font.family-t');
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    &.step-1 {
+        #prev-btn,
+        button[type=submit] {
+            display: none;
+        }
+        #next-btn {
+            margin-left: auto;
+        }
+    }
+    &.step-last {
+        button[type=submit] {
+            display: block;
+        }
+        #next-btn {
+            display: none;
+        }
+    }
     &-progress {
         margin: 0;
         padding: 0;
@@ -173,13 +238,28 @@ input[type=search]::-webkit-search-results-decoration {
             color: #fff;
             padding: 23px 30px 23px 90px;
             font: 700 normal rem(18px) / 1.25 get('font.family-h');
+            @media all and (max-width: get('responsive.md')) {
+                font-size: rem(16px);
+                padding-left: 20px;
+                padding-right: 20px;
+            }
             &:first-child {
                 border-radius: 8px 0 0 8px;
             }
             &:not(:first-child) {
                 padding-left: 125px;
+                @media all and (max-width: get('responsive.md')) {
+                    padding-left: 60px;
+                }
+                @media all and (max-width: get('responsive.sm')) {
+                    padding-left: 40px;
+                    padding-right: 20px;
+                }
                 &:before {
                     left: 75px;
+                    @media all and (max-width: get('responsive.md')) {
+                        left: unset;
+                    }
                 }
             }
             &:last-child {
@@ -205,6 +285,14 @@ input[type=search]::-webkit-search-results-decoration {
                 transform: translateY(-50%);
                 z-index: 1;
                 margin: 0;
+                @media all and (max-width: get('responsive.md')) {
+                    font-size: rem(16px);
+                    position: relative;
+                    left: unset;
+                    top: unset;
+                    transform: none;
+                    margin-right: 10px;
+                }
             }
             &:after {
                 content: '';
@@ -216,12 +304,145 @@ input[type=search]::-webkit-search-results-decoration {
                 height: 0;
                 border-style: solid;
                 border-width: 34.5px 0 34.5px 35px;
+                top: 50%;
+                transform: translateY(-50%);
                 border-color: transparent transparent transparent #353535;
                 margin-right: -35px;
                 z-index: 1;
+                @media all and (max-width: get('responsive.md')) {
+                    border-width: 33px 0 33px 35px;
+                }
+                @media all and (max-width: get('responsive.sm')) {
+                    border-width: 33px 0 33px 20px;
+                    margin-right: -20px;
+                }
             }
             &:last-child:after {
                 display: none;
+            }
+        }
+    }
+    &-buttons {
+        margin-top: 80px;
+        display: flex;
+        #next-btn,
+        #submit-btn {
+            margin-left: 20px;
+        }
+        #prev-btn {
+            margin-left: auto;
+        }
+        button {
+            min-width: 130px;
+            padding: 12px 20px;
+            @media all and (max-width: get('responsive.sm')) {
+                font-size: rem(14px);
+                min-width: unset;
+            }
+            &:disabled {
+                background-color: #BFBFBF;
+            }
+        }
+    }
+    .action-add-item {
+        font: 400 normal rem(16px) / 1.2 get('font.family-t');
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: none;
+        background: #505050;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        padding: 11px 15px;
+        svg {
+            fill: #fff;
+            margin-right: 10px;
+        }
+    }
+    .declaration {
+        .form-row {
+            display: flex;
+            align-items: flex-end;
+            margin: 0 -10px;
+            >* {
+                flex: 1;
+                margin: 0 10px;
+            }
+            @media all and (max-width: get('responsive.md')) {
+                display: block;
+                >* {
+                    margin-top: 16px;
+                }
+                .action-remove,
+                .total {
+                    display: inline-block;
+                    text-align: right;
+                }
+                .action-remove {
+                    display: block;
+                    max-width: 100%;
+                }
+                .total {
+                    max-width: 100%;
+                    display: block;
+                    label {
+                        display: block;
+                    }
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &-bar {
+            margin-top: 30px;
+            padding-right: 40px;
+            display: flex;
+            justify-content: space-between;
+            @media all and (max-width: get('responsive.sm')) {
+                padding-right: 0;
+                flex-direction: column;
+                .action-add-item {
+                    justify-content: center;
+                }
+            }
+            &-total {
+                font: 400 normal rem(18px) / 1.25 get('font.family-t');
+                text-align: right;
+                color: #000000;
+                @media all and (max-width: get('responsive.sm')) {
+                    margin-top: 20px;
+                }
+                .number {
+                    font-weight: 700;
+                    font-size: rem(22px);
+                    margin-left: 20px;
+                }
+            }
+        }
+        .action-remove {
+            max-width: 50px;
+        }
+        .product-description {
+            flex: 2;
+        }
+        .quantity {
+            flex: 0.5;
+        }
+        .total {
+            max-width: 115px;
+            .number {
+                display: block;
+                height: 44px;
+                font: 400 normal rem(18px) / 44px get('font.family-t');
+            }
+        }
+        .action-remove {
+            height: 44px;
+            display: flex;
+            svg {
+                margin: auto;
             }
         }
     }
