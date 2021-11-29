@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;700;800;900&display=swap');
 h1,
 h2,
 h3,
@@ -57,8 +57,19 @@ p {
 }
 
 .dashboard-title {
-    font: 400 normal rem(35px) / 1.25 get('font.family-h');
-    color: #6F6F6F;
-    text-transform: initial;
     margin-bottom: 48px;
+    @media all and (max-width: get('responsive.sm')) {
+        margin-bottom: 20px;
+    }
+    p {
+        margin-top: 24px;
+    }
+    h1 {
+        font: 400 normal rem(35px) / 1.25 get('font.family-h');
+        color: #6F6F6F;
+        text-transform: initial;
+        @media all and (max-width: get('responsive.sm')) {
+            font-size: rem(22px);
+        }
+    }
 }

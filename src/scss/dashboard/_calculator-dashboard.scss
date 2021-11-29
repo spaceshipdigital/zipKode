@@ -1,6 +1,14 @@
 .calculator-dashboard {
     &-wrap {
         display: flex;
+        @media all and (max-width: get('responsive.xl')) {
+            flex-direction: column;
+        }
+    }
+    select,
+    input[type=text],
+    input[type=number] {
+        width: 100%;
     }
 }
 
@@ -8,8 +16,95 @@
     padding: 40px 30px 48px;
     background: #FFBE44;
     box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.25);
-    flex: 1;
     margin-right: 12px;
+    width: 55%;
+    @media all and (max-width: get('responsive.xl')) {
+        margin-right: 0;
+        width: 100%;
+    }
+    h2 {
+        font: 700 normal rem(26px) / 1.19 get('font.family-t');
+        text-align: center;
+        color: #fff;
+    }
+    input[type=submit] {
+        display: table;
+        margin: 60px auto 0;
+    }
+    .price-wrap,
+    .weight-wrap {
+        position: relative;
+        &:after {
+            content: 'Kg';
+            position: absolute;
+            right: 17px;
+            text-align: right;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    }
+    .price-wrap:after {
+        content: '$';
+    }
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    &-row-info,
+    &-row-third,
+    &-row-country,
+    &-row-weight {
+        width: 100%;
+    }
+    &-row-country {
+        flex: 2;
+        margin-right: 20px;
+    }
+    &-row-weight {
+        flex: 1;
+        margin-left: 20px;
+    }
+    &-row-third {
+        width: 35%;
+        margin-right: 30px;
+    }
+    &-row-info {
+        flex: 2;
+        margin-left: 30px;
+        p {
+            font: 400 normal rem(14px) / 1.21 get('font.family-t');
+            color: #585858;
+            display: inline-block;
+            margin: 0;
+        }
+        ul {
+            margin-top: 10px;
+            li {
+                list-style: none;
+                &:before {
+                    content: "\2022";
+                    color: #585858;
+                    font-weight: bold;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &-row-bulky {
+        width: 40%;
+        margin-left: 30px;
+        text-align: left;
+        >label {
+            display: block;
+            font-size: rem(16px);
+        }
+        .form-check {
+            display: inline-block;
+            margin-right: 30px;
+        }
+    }
 }
 
 .calc-results {
@@ -18,4 +113,64 @@
     padding: 40px 20px;
     background: #F2F2F2;
     box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.25);
+    width: calc(100% - 55% - 24px);
+    @media all and (max-width: get('responsive.xl')) {
+        margin-left: 0;
+        margin-top: 24px;
+        width: 100%;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        tr {
+            td {
+                padding: 20px 0;
+                border-bottom: 1px solid rgba(87, 87, 87, 0.4);
+                font: 400 normal rem(16px) / 1.18 get('font.family-t');
+                color: #000000;
+            }
+            &:last-child td {
+                border: none;
+            }
+            th {
+                font: 900 normal rem(16px) / 1.18 get('font.family-t');
+                color: #626262;
+            }
+            td,
+            th {
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    &-total {
+        text-align: left !important;
+        padding-left: 50% !important;
+        ul {
+            padding: 0;
+            margin: 14px 0 0;
+            li {
+                list-style: none;
+                font: 400 normal rem(14px) / 1.21 get('font.family-t');
+                color: #676767;
+            }
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font: 400 normal rem(16px) / 1.18 get('font.family-t');
+            span {
+                font-weight: 900;
+                font-size: rem(22px);
+                text-align: right;
+            }
+        }
+    }
+    .carrier-logo {
+        width: 82px;
+        height: 62px;
+        position: relative;
+    }
 }

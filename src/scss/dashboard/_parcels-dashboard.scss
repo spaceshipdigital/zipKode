@@ -1,0 +1,22 @@
+.parcels-dashboard {
+    .action-edit-parcel {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .alert-wrap {
+        text-align: right;
+    }
+    .btn-gradient {
+        margin-top: 32px;
+        display: inline-block;
+    }
+    .table-default {
+        margin-top: 30px;
+    }
+}
+
+.modal-body {
+    padding: 0 37px;
+}
+

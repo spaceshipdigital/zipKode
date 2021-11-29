@@ -44,3 +44,8 @@ import '../images/search-icon.png';
 
 import '../images/topup-icon.svg';
 import '../images/my-account-icon.png';
+
+import '../images/dhl.jpg';
+import '../images/fedex.jpg';
+import '../images/fedex-economy.jpg';
+import '../images/box.jpg';

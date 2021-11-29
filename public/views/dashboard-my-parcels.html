@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <%= _.template(require('./../includes/svg-dashboard.html').default)() %>
+        <div id="wrapper">
+            <div id="main">
+                <div class="dashboard">
+                    <%= _.template(require('./../includes/dashboard-sidebar.html').default)() %>
+                        <div class="dashboard-content">
+                            <%= _.template(require('./../includes/header-dashboard.html').default)() %>
+                                <div class="wrap parcels-dashboard">
+                                    <h1 class="dashboard-title">My Parcels</h1>
+                                    <div class="parcels-dashboard-wrap">
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                                                    Incoming Parcels
+                                                    <span class="qty">2</span>
+                                                </button>
+                                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                                    Parcels at ZipKode
+                                                    <span class="qty">7</span>
+                                                </button>
+                                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                                                    Parcels Shipped
+                                                    <span class="qty">2</span>
+                                                </button>
+                                            </div>
+                                        </nav>
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                                <div class="alert-wrap">
+                                                    <button type="button" class="btn btn-gradient">
+                                                        <svg role="img" class="bell-icon"><use xlink:href="#bell-icon"></use></svg>Alert a new Parcel
+                                                    </button>
+                                                </div>
+                                                <table class="table-default">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="remove"></th>
+                                                            <th class="parcel-id">Parcel ID</th>
+                                                            <th class="parcel-detail">Parcel detail</th>
+                                                            <th>Number of items</th>
+                                                            <th class="customs-value">Customs Value</th>
+                                                            <th>Weight</th>
+                                                            <th class="status">Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="remove" data-label="">
+                                                                <span class="action-remove">
+                                                                <svg role="img" class="remove-icon">
+                                                                    <use xlink:href="#remove-icon"></use>
+                                                                </svg>
+                                                            </span>
+                                                            </td>
+                                                            <td class="parcel-id" data-label="Parcel ID">
+                                                                <span class="no">No 1</span>
+                                                                <span class="date">2021-10-15<br>08:19:14</span>
+                                                            </td>
+                                                            <td class="parcel-detail" data-label="Parcel detail">
+                                                                <div class="parcel-detail-wrap">
+                                                                    <div class="manufacture">
+                                                                        Apple
+                                                                        <span class="id">1258422566658</span>
+                                                                    </div>
+                                                                    <span class="action-info" data-bs-toggle="modal" data-bs-target="#modal-info">
+                                                                        <svg role="img" class="info-icon"><use xlink:href="#info-icon"></use></svg>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td data-label="Number of items">
+                                                                1 item
+                                                            </td>
+                                                            <td class="customs-value" data-label="Customs Value">
+                                                                <div class="result" style="display:block">
+                                                                    $98.10
+                                                                    <span class="action-edit-parcel">
+                                                                <svg role="img" class="edit-icon">
+                                                                    <use xlink:href="#edit-icon"></use>
+                                                                </svg>
+                                                            </span>
+                                                                </div>
+                                                                <div class="edit" style="display:none">
+                                                                    <div class="edit-top">
+                                                                        <span>$00.00</span>
+                                                                        <span class="action-add-parcel">
+                                                                        <svg role="img" class="add-icon"><use xlink:href="#add-icon"></use></svg>
+                                                                    </span>
+                                                                    </div>
+                                                                    <a class="action-provide-declaration">Provide declaration</a>
+                                                                </div>
+                                                            </td>
+                                                            <td data-label="Weight">
+                                                                0.25kg
+                                                            </td>
+                                                            <td class="status" data-label="Status">
+                                                                <span class="label">Incoming</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="">
+                                                                <span class="action-remove">
+                                                                <svg role="img" class="remove-icon">
+                                                                    <use xlink:href="#remove-icon"></use>
+                                                                </svg>
+                                                            </span>
+                                                            </td>
+                                                            <td class="parcel-id" data-label="Parcel ID">
+                                                                <span class="no">No 2</span>
+                                                                <span class="date">
+                                                                2021-10-15<br>08:19:14
+                                                            </span>
+                                                            </td>
+                                                            <td class="parcel-detail" data-label="Parcel detail">
+                                                                <div class="parcel-detail-wrap">
+                                                                    <div class="manufacture">
+                                                                        Apple
+                                                                        <span class="id">1258422566658</span>
+                                                                    </div>
+                                                                    <span class="action-info" data-bs-toggle="modal" data-bs-target="#modal-info">
+                                                                        <svg role="img" class="info-icon"><use xlink:href="#info-icon"></use></svg>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td data-label="Number of items">
+                                                                1 item
+                                                            </td>
+                                                            <td class="customs-value" data-label="Customs Value">
+                                                                <div class="result">
+                                                                    $98.10
+                                                                    <span class="action-edit-parcel">
+                                                                <svg role="img" class="edit-icon">
+                                                                    <use xlink:href="#edit-icon"></use>
+                                                                </svg>
+                                                            </span>
+                                                                </div>
+                                                                <div class="edit" style="display:none">
+                                                                    <div class="edit-top">
+                                                                        $00.00
+                                                                        <span class="action-add-parcel">
+                                                                        <svg role="img" class="add-icon"><use xlink:href="#add-icon"></use></svg>
+                                                                    </span>
+                                                                    </div>
+                                                                    <a class="action-provide-declaration">Provide declaration</a>
+                                                                </div>
+                                                            </td>
+                                                            <td data-label="Weight">
+                                                                0.25kg
+                                                            </td>
+                                                            <td class="status" data-label="Status">
+                                                                <span class="label">Incoming</span>
+                                                                <span class="tag">
+                                                                <svg role="img" class="lightning-icon">
+                                                                    <use xlink:href="#lightning-icon"></use>
+                                                                </svg>
+                                                                Flash Delivery
+                                                            </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                                <%= _.template(require('./../includes/dashboard-parcels-tab2.html').default)() %>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <%= _.template(require('./../includes/modal-parel-information.html').default)() %>
+
+
+
+</body>
+
+
+
+</html>

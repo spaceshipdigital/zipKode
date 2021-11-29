@@ -10,7 +10,6 @@
     height: 33px;
 }
 
-
 .person-icon {
     width: 36px;
     height: 36px;
@@ -26,4 +25,51 @@
 .dashboard-parcels-icon {
     width: 37px;
     height: 28px;
+}
+
+.edit-icon {
+    width: 15px;
+    height: 15px;
+    fill: #000;
+    pointer-events: none;
+}
+
+.remove-icon {
+    width: 18px;
+    height: 21px;
+    fill: #000;
+}
+
+.info-icon {
+    width: 15px;
+    height: 15px;
+    fill: #000;
+}
+
+.lightning-icon {
+    width: 9px;
+    height: 12px;
+    fill: #fff;
+}
+
+.add-icon {
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+.bell-icon {
+    width: 36px;
+    height: 24px;
+    fill: #000;
+}
+
+.download-icon {
+    width: 18px;
+    height: 19px;
+}
+
+.arrow-down-icon {
+    fill: #000;
+    width: 8px;
+    height: 12px;
 }

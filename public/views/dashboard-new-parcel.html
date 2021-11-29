@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <%= _.template(require('./../includes/svg-dashboard.html').default)() %>
+        <div id="wrapper">
+            <div id="main">
+                <div class="dashboard">
+                    <%= _.template(require('./../includes/dashboard-sidebar.html').default)() %>
+                        <div class="dashboard-content">
+                            <%= _.template(require('./../includes/header-dashboard.html').default)() %>
+                                <div class="wrap new-parcel-dashboard">
+                                    <div class="dashboard-title">
+                                        <h1>Pre Alert a New Parcel</h1>
+                                        <p>This form allows you to notify us of the arrival of a new parcel in our warehouses.<br>This form is optional but allows you to process your order more quickly.</p>
+                                    </div>
+                                    <div class="new-parcel-dashboard-wrap">
+                                        <div class="qbox">
+                                            <ul class="qbox-progress">
+                                                <li class="active">About my Parcel</li>
+                                                <li class="">Parcel declaration</li>
+                                            </ul>
+                                            <div id="qbox-container">
+                                                <form class="needs-validation" id="form-wrapper" method="post" name="form-wrapper" novalidate="">
+                                                    <div id="steps-container">
+                                                        <div class="step">
+                                                            <span>Name, model and description</span>
+                                                            <div class="form-row">
+                                                                <div class="item-product">
+                                                                    <label for="item-product">Item product<span class="required">*</span></label>
+                                                                    <select class="form-select" name="item-product[]" id="item-product">
+                                                                        <option selected>Apple</option>
+                                                                        <option>Microsoft</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="product-description">
+                                                                    <label for="product-description">Product description<span class="required">*</span></label>
+                                                                    <input type="text" placeholder="Description" name="product-description[]" id="product-description" />
+                                                                </div>
+                                                                <div class="quantity">
+                                                                    <label for="quantity">Quantity<span class="required">*</span></label>
+                                                                    <input type="number" name="quantity[]" id="quantity" value="1" />
+                                                                </div>
+                                                                <div class="price-per-item">
+                                                                    <label for="quantity">Price<span class="required">*</span>(per item)</label>
+                                                                    <input type="number" name="price-per-item[]" id="price-per-item" value="1" />
+                                                                </div>
+                                                                <div class="total">
+                                                                    <label for="quantity">Total declared Value</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="step">
+                                                            <h1>Step2</h1>
+                                                        </div>
+                                                    </div>
+                                                    <div id="q-box__buttons">
+                                                        <button id="exit-btn" type="button">Exit</button>
+                                                        <button id="prev-btn" type="button">Back</button>
+                                                        <button id="next-btn" type="button">Next</button>
+                                                        <button id="submit-btn" type="submit">Submit</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <%= _.template(require('./../includes/modal-parel-information.html').default)() %>
+</body>
+
+</html>

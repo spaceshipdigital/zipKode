@@ -11,11 +11,13 @@
 @import './ui/buttons';
 @import './ui/feature-card';
 @import './ui/cards';
+@import './ui/tables';
 @import './layouts/header';
 @import './layouts/dashboard-header';
 @import './layouts/signup';
 @import './layouts/footer';
 @import './layouts/dashboard-sidebar';
+@import './layouts/modal-parcel-info';
 @import './blocks/hero';
 @import './blocks/how-it-works';
 @import './blocks/shopper';
@@ -27,3 +29,4 @@
 @import './blocks/content';
 @import './dashboard/main-dashboard';
 @import './dashboard/calculator-dashboard';
+@import './dashboard/parcels-dashboard';

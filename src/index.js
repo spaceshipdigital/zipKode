@@ -19,10 +19,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     const actionCopyAddress = document.querySelectorAll('.action-copy-address');
     actionCopyAddress.forEach(el => {
-        el.addEventListener('click', (e) =>{
+        el.addEventListener('click', (e) => {
             console.log('copied');
         })
     })
+
+    const actionEditParcel = document.querySelectorAll('td.customs-value');
+    actionEditParcel.forEach(td => {
+        td.addEventListener('click', e => {
+            if (e.target && e.target.matches('.action-edit-parcel')) {
+                td.querySelector('.result').style.display = 'none';
+                td.querySelector('.edit').style.display = 'block';
+            }
+        });
+    });
 });
 
 function animateLogos() {

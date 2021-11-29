@@ -69,7 +69,7 @@ body {
         margin: auto;
         transform: translateZ(-13px);
         transform-style: preserve-3d;
-        transition: all .3s linear;
+        transition: all .5s linear;
         width: 100%;
         .front {
             backface-visibility: hidden;
@@ -110,5 +110,19 @@ body {
     }
     &.active .logo-3d-item {
         transform: rotateX( 90deg) translateZ(23px);
+    }
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    top: 29px;
+    right: 29px;
+}
+
+@media all and (max-width: get('responsive.sm')) {
+    .modal-header,
+    .modal-body {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
     }
 }
