@@ -27,7 +27,7 @@
     }
     .navbar-collapse {
         background-color: #000;
-        z-index: 10000;
+        z-index: 100;
         position: relative;
         @media all and (max-width: get('responsive.xl')) {
             position: absolute;

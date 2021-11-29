@@ -228,6 +228,7 @@
     }
     .navbar-collapse {
         width: 100%;
+        z-index: 100;
         @media all and (max-width: get('responsive.lg')) {
             position: absolute;
             background: #000;
