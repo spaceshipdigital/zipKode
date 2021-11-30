@@ -151,6 +151,10 @@ table.responsive {
         width: 254px;
         min-width: auto;
         max-width: auto;
+        @media all and (max-width: get('responsive.xl')) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
         @media all and (max-width: get('responsive.md')) {
             width: 100%;
             padding: 16px 10px;
@@ -158,19 +162,13 @@ table.responsive {
         &-wrap {
             display: flex;
             align-items: center;
+            justify-content: flex-start;
             @media all and (max-width: get('responsive.md')) {
                 justify-content: flex-end;
-                padding-right: 30px;
             }
         }
         .action-info {
-            position: absolute;
-            right: 60px;
-            top: 50%;
-            transform: translateY(-50%);
-            @media all and (max-width: get('responsive.md')) {
-                right: 10px;
-            }
+            margin-left: 16px;
             &:hover {
                 cursor: pointer;
             }
