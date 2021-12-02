@@ -1,16 +1,16 @@
 <ul class="nav nav-pills" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Action Required (2)</button>
+        <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Action Required (2)</button>
     </li>
     <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">In Progress (3)</button>
+        <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">In Progress (3)</button>
     </li>
     <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Ready to pay (2)</button>
     </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
         <table class="table-default responsive">
             <thead>
                 <tr>
@@ -136,7 +136,7 @@
             </tbody>
         </table>
     </div>
-    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
         <table class="table-default responsive">
             <thead>
                 <tr>
@@ -259,7 +259,7 @@
                         <button class="action-send">Send</button>
                     </td>
                 </tr>
-                <tr>
+                <tr class="grouped-product">
                     <td class="check" data-label="">
                         <span class="cross"></span>
                     </td>
@@ -275,8 +275,214 @@
                                     <svg role="img" class="arrow-down-icon">
                                         <use xlink:href="#arrow-down-icon"></use>
                                     </svg>
-                                    Show all parcels
+                                    <span>Show all parcels</span>
                                 </span>
+                            </div>
+                            <span class="action-info" data-bs-toggle="modal" data-bs-target="#modal-info">
+                            <svg role="img" class="info-icon"><use xlink:href="#info-icon"></use></svg>
+                        </span>
+                        </div>
+                    </td>
+                    <td data-label="Number of items">
+                        2 items
+                    </td>
+                    <td class="customs-value" data-label="Customs Value">
+                        <div class="result" style="display:block">
+                            $98.10
+                            <span class="action-edit-parcel">
+                        <svg role="img" class="edit-icon">
+                            <use xlink:href="#edit-icon"></use>
+                        </svg>
+                    </span>
+                        </div>
+                        <div class="edit" style="display:none">
+                            <div class="edit-top">
+                                <span>$00.00</span>
+                                <span class="action-add-parcel">
+                                <svg role="img" class="add-icon"><use xlink:href="#add-icon"></use></svg>
+                            </span>
+                            </div>
+                            <a class="action-provide-declaration">Provide declaration</a>
+                        </div>
+                    </td>
+                    <td data-label="Weight">
+                        0kg
+                    </td>
+                    <td class="status" data-label="Status">
+                        <span class="label">Ready to Ship</span>
+                    </td>
+                    <td class="send">
+                        <button class="action-send">Send</button>
+                    </td>
+                </tr>
+
+                <tr class="child-product">
+                    <td class="check" data-label="">
+                        <span class="tree-cell">Child product</span>
+                    </td>
+                    <td class="parcel-id" data-label="Parcel ID">
+                        <span class="no">No 2</span>
+                        <span class="date">2021-10-15<br>08:19:14</span>
+                    </td>
+                    <td class="parcel-detail" data-label="Parcel detail">
+                        <div class="parcel-detail-wrap">
+                            <div class="manufacture">
+                                Apple
+                                <span class="id">1258422566658</span>
+                            </div>
+                            <span class="action-info" data-bs-toggle="modal" data-bs-target="#modal-info">
+                                            <svg role="img" class="info-icon"><use xlink:href="#info-icon"></use></svg>
+                                        </span>
+                        </div>
+                    </td>
+                    <td data-label="Number of items">
+                        1 item
+                    </td>
+                    <td class="customs-value" data-label="Customs Value">
+                        <div class="result" style="display:block">
+                            $98.10
+                            <span class="action-edit-parcel">
+                                        <svg role="img" class="edit-icon">
+                                            <use xlink:href="#edit-icon"></use>
+                                        </svg>
+                                    </span>
+                        </div>
+                        <div class="edit" style="display:none">
+                            <div class="edit-top">
+                                <span>$00.00</span>
+                                <span class="action-add-parcel">
+                                                <svg role="img" class="add-icon"><use xlink:href="#add-icon"></use></svg>
+                                            </span>
+                            </div>
+                            <a class="action-provide-declaration">Provide declaration</a>
+                        </div>
+                    </td>
+                    <td data-label="Weight">
+                        0kg
+                    </td>
+                    <td class="status" data-label="Status">
+                        <span class="label">Received</span>
+                    </td>
+                    <td class="send">
+
+                    </td>
+                </tr>
+                <tr class="child-product">
+                    <td class="check" data-label="">
+                        <span class="tree-cell">Child product</span>
+                    </td>
+                    <td class="parcel-id" data-label="Parcel ID">
+                        <span class="no">No 2</span>
+                        <span class="date">2021-10-15<br>08:19:14</span>
+                    </td>
+                    <td class="parcel-detail" data-label="Parcel detail">
+                        <div class="parcel-detail-wrap">
+                            <div class="manufacture">
+                                Apple
+                                <span class="id">1258422566658</span>
+                            </div>
+                            <span class="action-info" data-bs-toggle="modal" data-bs-target="#modal-info">
+                                            <svg role="img" class="info-icon"><use xlink:href="#info-icon"></use></svg>
+                                        </span>
+                        </div>
+                    </td>
+                    <td data-label="Number of items">
+                        1 item
+                    </td>
+                    <td class="customs-value" data-label="Customs Value">
+                        <div class="result" style="display:block">
+                            $98.10
+                            <span class="action-edit-parcel">
+                                        <svg role="img" class="edit-icon">
+                                            <use xlink:href="#edit-icon"></use>
+                                        </svg>
+                                    </span>
+                        </div>
+                        <div class="edit" style="display:none">
+                            <div class="edit-top">
+                                <span>$00.00</span>
+                                <span class="action-add-parcel">
+                                                <svg role="img" class="add-icon"><use xlink:href="#add-icon"></use></svg>
+                                            </span>
+                            </div>
+                            <a class="action-provide-declaration">Provide declaration</a>
+                        </div>
+                    </td>
+                    <td data-label="Weight">
+                        0kg
+                    </td>
+                    <td class="status" data-label="Status">
+                        <span class="label">Received</span>
+                    </td>
+                    <td class="send">
+                    </td>
+                </tr>
+                <tr class="child-product">
+                    <td class="check" data-label="">
+                        <span class="tree-cell">Child product</span>
+                    </td>
+                    <td class="parcel-id" data-label="Parcel ID">
+                        <span class="no">No 2</span>
+                        <span class="date">2021-10-15<br>08:19:14</span>
+                    </td>
+                    <td class="parcel-detail" data-label="Parcel detail">
+                        <div class="parcel-detail-wrap">
+                            <div class="manufacture">
+                                Apple
+                                <span class="id">1258422566658</span>
+                            </div>
+                            <span class="action-info" data-bs-toggle="modal" data-bs-target="#modal-info">
+                                            <svg role="img" class="info-icon"><use xlink:href="#info-icon"></use></svg>
+                                        </span>
+                        </div>
+                    </td>
+                    <td data-label="Number of items">
+                        1 item
+                    </td>
+                    <td class="customs-value" data-label="Customs Value">
+                        <div class="result" style="display:block">
+                            $98.10
+                            <span class="action-edit-parcel">
+                                        <svg role="img" class="edit-icon">
+                                            <use xlink:href="#edit-icon"></use>
+                                        </svg>
+                                    </span>
+                        </div>
+                        <div class="edit" style="display:none">
+                            <div class="edit-top">
+                                <span>$00.00</span>
+                                <span class="action-add-parcel">
+                                                <svg role="img" class="add-icon"><use xlink:href="#add-icon"></use></svg>
+                                            </span>
+                            </div>
+                            <a class="action-provide-declaration">Provide declaration</a>
+                        </div>
+                    </td>
+                    <td data-label="Weight">
+                        0kg
+                    </td>
+                    <td class="status" data-label="Status">
+                        <span class="label">Received</span>
+                    </td>
+                    <td class="send">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="check" data-label="">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check-3">
+                            <label class="form-check-label" for="check-3">&nbsp;</label>
+                        </div>
+                    </td>
+                    <td class="parcel-id" data-label="Parcel ID">
+                        <span class="no">No 1</span>
+                        <span class="date">2021-10-15<br>08:19:14</span>
+                    </td>
+                    <td class="parcel-detail" data-label="Parcel detail">
+                        <div class="parcel-detail-wrap">
+                            <div class="manufacture">
+                                Apple
+                                <span class="id">1258422566658</span>
                             </div>
                             <span class="action-info" data-bs-toggle="modal" data-bs-target="#modal-info">
                             <svg role="img" class="info-icon"><use xlink:href="#info-icon"></use></svg>
@@ -309,13 +515,14 @@
                         0kg
                     </td>
                     <td class="status" data-label="Status">
-                        <span class="label">Ready to Ship</span>
+                        <span class="label">Received</span>
                     </td>
                     <td class="send">
+                        <button class="action-send">Send</button>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Ready to pay tab</div>
 </div>

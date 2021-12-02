@@ -1,5 +1,60 @@
 table {
     border-collapse: collapse;
+    .grouped-product+tr {
+        table {
+            width: 100%;
+            td {
+                border-radius: 0 !important;
+            }
+        }
+    }
+    .child-product {
+        display: none;
+        td {
+            position: relative;
+        }
+    }
+    .tree-cell {
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 5px;
+        position: relative;
+        background-color: #ccc;
+        margin-left: 9px;
+        text-indent: -9999px;
+        @media all and (max-width: get('responsive.md')) {
+            text-indent: 0;
+            width: unset;
+            height: unset;
+            background: none;
+        }
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            background-color: #ccc;
+            position: absolute;
+        }
+        &:before {
+            width: 10px;
+            height: 1px;
+            margin-top: 2px;
+            margin-left: 2px;
+        }
+        &:after {
+            bottom: 50%;
+            width: 1px;
+            height: 30px;
+            left: 1px;
+        }
+        @media all and (max-width: get('responsive.md')) {
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+    }
 }
 
 table.responsive {
@@ -9,6 +64,9 @@ table.responsive {
         }
     }
     tr {
+        @media all and (max-width: get('responsive.md')) {
+            background-color: #fff !important;
+        }
         td {
             @media all and (max-width: get('responsive.md')) {
                 display: block;
@@ -63,6 +121,9 @@ table.responsive {
         @media all and (max-width: get('responsive.md')) {
             display: block;
             margin-bottom: 20px;
+            &.child-product {
+                display: none;
+            }
         }
         &:first-child {
             td:first-child {
@@ -76,8 +137,9 @@ table.responsive {
             }
         }
         &:nth-child(2n+1) {
+            // background-color: #E5E5E5;
             td {
-                background-color: #E5E5E5;
+                background-color: inherit;
             }
         }
         @media all and (max-width: get('responsive.md')) {
@@ -190,6 +252,11 @@ table.responsive {
                 padding-left: 20px;
                 position: relative;
                 margin-left: -20px;
+                &.unwrap {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
                 &:hover {
                     cursor: pointer;
                 }
@@ -197,6 +264,7 @@ table.responsive {
                     position: absolute;
                     left: 0;
                     top: 2px;
+                    transition: transform get('transition');
                 }
             }
         }

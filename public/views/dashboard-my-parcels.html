@@ -15,15 +15,17 @@
                         <div class="dashboard-content">
                             <%= _.template(require('./../includes/header-dashboard.html').default)() %>
                                 <div class="wrap parcels-dashboard">
-                                    <h1 class="dashboard-title">My Parcels</h1>
+                                    <div class="dashboard-title">
+                                        <h1>My Parcels</h1>
+                                    </div>
                                     <div class="parcels-dashboard-wrap">
                                         <nav>
                                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                                                <button class="nav-link " id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
                                                     Incoming Parcels
                                                     <span class="qty">2</span>
                                                 </button>
-                                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                                <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
                                                     Parcels at ZipKode
                                                     <span class="qty">7</span>
                                                 </button>
@@ -34,7 +36,7 @@
                                             </div>
                                         </nav>
                                         <div class="tab-content" id="nav-tabContent">
-                                            <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                            <div class="tab-pane fade " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                                 <div class="alert-wrap">
                                                     <button type="button" class="btn btn-gradient">
                                                         <svg role="img" class="bell-icon"><use xlink:href="#bell-icon"></use></svg>Alert a new Parcel
@@ -169,7 +171,7 @@
 
                                                 </table>
                                             </div>
-                                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                            <div class="tab-pane fade active show" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                                 <%= _.template(require('./../includes/dashboard-parcels-tab2.html').default)() %>
                                             </div>
                                             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
