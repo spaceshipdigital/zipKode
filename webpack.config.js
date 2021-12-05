@@ -1,18 +1,15 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const autoprefixer = require('autoprefixer');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const WebpackShellPlugin = require('webpack-shell-plugin');
+const WebpackShellPluginNext = require('webpack-shell-plugin-next');
 const fs = require('fs');
 const path = require('path');
 
 
-module.exports = (env = {}) => {
+module.exports = (env = {}, argv) => {
 
-    const { mode = 'development' } = env;
-
-    const isProd = mode === 'production';
-    const isDev = mode === 'development';
+    const isProd = argv.mode === 'production';
+    const isDev = argv.mode === 'development';
 
     const getStyleLoaders = () => {
         return [
@@ -55,22 +52,23 @@ module.exports = (env = {}) => {
                 filename: 'main.css'
             }));
             plugins.push(
-                new WebpackShellPlugin({
-                    onBuildExit: runShell()
+                new WebpackShellPluginNext({
+                    onBuildEnd: {
+                        scripts: runShell(),
+                        blocking: false
+                    }
                 })
             );
         }
         return plugins;
     };
 
-    console.log(mode);
     return {
         mode: isProd ? 'production' : isDev && 'development',
-
         output: {
-            filename: isProd ? 'main.js' : undefined
+            filename: isProd ? 'main.js' : undefined,
+            path: path.resolve(__dirname, 'dist')
         },
-
         module: {
             rules: [
 
@@ -112,9 +110,6 @@ module.exports = (env = {}) => {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            plugins: [
-                                autoprefixer()
-                            ],
                             sourceMap: true
                         }
                     }
@@ -124,16 +119,16 @@ module.exports = (env = {}) => {
                 // Loading SCSS
                 {
                     test: /\.(scss)$/,
-                    use: [...getStyleLoaders(), {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                autoprefixer()
-                            ],
-                            sourceMap: true
-                        }
-                    },
-                        'sass-loader']
+                    use: [
+                        ...getStyleLoaders(),
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
+                        'sass-loader'
+                    ]
                 },
                 {
                     test: /\.html$/,

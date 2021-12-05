@@ -1,3 +1,5 @@
+@use "sass:math";
+
 %clearfix {
     &:after {
         content: "";
@@ -15,7 +17,7 @@
 }
 
 @function rem($size) {
-    $remSize: $size / get('font.size');
+    $remSize: math.div($size, get('font.size'));
     //Default font size on html element is 100%, equivalent to 16px;
     @return #{$remSize}rem;
 }
