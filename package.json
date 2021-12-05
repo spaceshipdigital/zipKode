@@ -28,6 +28,7 @@
         "html-webpack-plugin": "^5.5.0",
         "jshint": "^2.13.1",
         "mini-css-extract-plugin": "^2.4.5",
+        "postcss": "^8.4.4",
         "postcss-loader": "^6.2.1",
         "raw-loader": "^4.0.2",
         "sass": "^1.44.0",
