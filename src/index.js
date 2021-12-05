@@ -1,5 +1,6 @@
 'strict';
 const $ = require('jquery');
+require('jquery-ui/ui/widgets/tooltip');
 window.jQuery = $;
 window.$ = $;
 
@@ -17,9 +18,6 @@ import parcelsTable from './js/modules/parcels-table';
     window.addEventListener('DOMContentLoaded', (event) => {
         animateLogos();
         parcelsTable();
-
-        // We have to use jQuery since bootstrap use it
-        $('body').tooltip({ selector: '[data-bs-toggle=tooltip]' });
 
         // Init multistep forms
         const qboxes = document.querySelectorAll('.qbox');
@@ -39,7 +37,6 @@ import parcelsTable from './js/modules/parcels-table';
             })
         })
 
-
         const actionEditParcel = document.querySelectorAll('td.customs-value');
         actionEditParcel.forEach(td => {
             td.addEventListener('click', e => {
@@ -49,8 +46,9 @@ import parcelsTable from './js/modules/parcels-table';
                 }
             });
         });
+
+        // We have to use jQuery since bootstrap use it
+        $('[data-bs-toggle="tooltip"]').tooltip();
     });
-
-
 
 })();
